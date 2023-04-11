@@ -1,72 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
-    <title>Vaireview</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Testing</title>
 </head>
 <body>
-    <header>    
-        <div class="navegacion">
-            <div><a href="index.html"><img class="logo" src="assets/img/valorant-logo-play-2.svg" alt=""></a></div>
-            
-            <div class="busqueda">
-                    <input type="text"
-                        placeholder=" Buscar pelicula"
-                        name="search">
+    <div class="contenedor-global">
+        <header class="cabecera">
+            <div class="logo">
+                <a href="/index.html"><img src="img/logo.png" alt="" class="img-logo"></a> <!-- CAMBIAR POR LOGO EMPRESA -->
             </div>
-            
-            <div class="enlaces">
-                <ul>
-                    <li><a href="#">Categorias</a></li>
-                    <li><a href="#">Noticias</a></li>
-                    <li><a href="#">Acerca de nosotros?</a></li>
+            <div class="contenedor-burger-menu">
+                <button id="btn-burger" onclick="menu_burger()"></button>
+            </div>
+        </header>
+        <div class="titulo-principal">
+            <h1>
+                Equipo23026<!-- H1 obligatorio pero no me gusta, ocultar y cambiar por logo? -->
+            </h1>
+        </div>
+        <div class="optional">
+            <div id="enlaces-cabecera">
+                <img id="btn-exit" src="img/bx-x.svg" alt="" onclick="salir()">
+                <ul class="lista-enlaces">
+                    <li><a href="/games.html"> Nuestros juegos</a></li>
+                    <li><a href="#"> Sobre nosotros </a></li>
+                    <li><a href="#"> Trabaja con nosotros</a></li>
                 </ul>
             </div>
-            <!-- FALTA H1 -->
-       </div>
-    </header>
-    <main>
-        <section class="highlights">
-            <h2>Destacadas</h2>
-            <div class="titulares">
-                <div class="movie-highligh">
-                    <a href="#"><img  src="assets/img/episode1.jpg" alt=""></a>
-                </div>
-                <div class="movie-highligh">
-                    <a href="#"><img src="assets/img/episode2.jpg" alt=""></a>
-                </div>
-                <div class="movie-highligh">
-                    <a href="#"><img src="assets/img/episode3.jpg" alt=""></a>
-                </div>
-            </div>
-        </section>
-        <section class="seccion-estreno">
-            <h2>Ultimos estrenos</h2>
-            <ul>
-                <div class="estrenos"><button class="btn">Ver reseña</button><li>Dungeons & Dragons</li></div>  
-                <div class="estrenos"><button class="btn">Ver reseña</button><li>Super Mario Bross</li></div>
-                <div class="estrenos"><button class="btn">Ver reseña</button><li>John Wick 4</li></div>
-                <div class="estrenos"><button class="btn">Ver reseña</button><li>13 exorcismos</li></div>
-                <div class="estrenos"><button class="btn">Ver reseña</button><li>¡Shazam! La furia de los dioses</li></div>
-                <div class="estrenos"><button class="btn">Ver reseña</button><li>La ballena</li></div>
-                <div class="estrenos"><button class="btn">Ver reseña</button><li>Scream VI</li></div>
-                <div class="estrenos"><button class="btn">Ver reseña</button><li>Creed III</li></div>
-            </ul>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi in ipsum distinctio cumque quae a cupiditate quis fugit facilis neque placeat tempora, sint reiciendis, nulla rerum sed ea minus itaque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos rerum quis voluptatem dolorum numquam voluptatum et repudiandae perferendis, dolorem corporis, debitis nulla asperiores fuga, non assumenda minima earum nam inventore!
-            </p>
-        </section>
-    </main>
-    <footer>
-        <div class="pie">
-            <div class="copyright">
-                <p>Derechos reservados sarasa corp.</p>
-            </div>
-            <div class="contacto"><p>loguitos redes</p></div>
         </div>
-    </footer>
+        <main class="principal">
+            <section class="post">
+                <img class="img-post"src="img/noticia.webp" alt="">
+                <h2>Titulo noticia 1</h2>
+                <article>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum nesciunt incidunt aut eius similique officiis officia unde ad sint autem.</article>
+            </section>
+            <div class="separador"></div>
+            <section class="post">
+                <img class="img-post"src="img/noticia_2.webp" alt="">
+                <h2>Titulo noticia 2</h2>
+                <article>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est beatae ex odit ullam nam, quibusdam aliquid cum! Pariatur, amet modi!</article>
+            </section>
+        </main>
+        <footer class="pie">
+                <div class="descripcion-pie">
+                    <p>
+                        Somos <span>Equipo23026</span>, un equipo apasionado por los juegos de rol. 
+                    </p>
+                    <p>
+                        Nuestra mision es satisfacer las necesidades de los amantes de este género en constante evolución.
+                    </p>
+                </div>
+                <div class="redes">
+                    <img src="img/bxl-instagram.svg" alt="" class="img-redes">
+                    <img src="img/bxl-twitter.svg" alt="" class="img-redes">
+                    <img src="img/bxl-youtube.svg" alt="" class="img-redes">
+                </div>
+                <div class="copyright">
+                    <p>
+                        Copyright © 2023 Equipo23026
+                    </p>
+                </div>
+        </footer>
+    </div>
+    <script src="main.js"></script>
 </body>
 </html>
