@@ -1,0 +1,187 @@
+:root{
+    --color-primario:#222;
+    --color-secundario:#aaa;
+    --color-fondo:#D8D8D8;
+}
+.contenedor-global{
+    width: 100%;
+    background-color: var(--color-fondo);
+}
+.titulo-principal{
+    height: 100px;
+    color: #245953;
+    font-size: 1.5em;
+    text-align: center;
+    width: 100%;
+}
+/* CSS MENU HAMBURGUESA */
+
+#enlaces-cabecera{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-primario);
+    transition: 200ms;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1;
+}
+.lista-enlaces{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: var(--color-fondo);
+    line-height: 2em;
+    height: 100vh;
+}
+.lista-enlaces a{
+    text-decoration: none;
+    color: var(--color-fondo);
+}
+#btn-exit{
+    position: fixed;
+    right: 22px;
+    top: 22px;
+    width: 70px;
+}
+
+/* CSS HEADER */
+
+.cabecera{
+    height: 120px;
+    width: 100%;
+    background-color: var(--color-primario);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.img-logo{
+    width: 90px;
+}
+.logo{
+    margin: 10px 0px 10px 10px;
+    flex: 1 0 20%;
+    order: 0;
+}
+.enlaces-cabecera{
+    flex: 8 10 20%;
+    order: 1;
+}
+
+.contenedor-burger-menu{
+    margin: 20px;
+    flex: 1 1 10%;
+    order: 2;;
+    text-align: end;
+}
+
+#btn-burger{
+    width: 50px;
+    height: 50px;
+    border: none;
+    padding: 0px;
+    margin: 10px;
+    background: linear-gradient(
+        to bottom, 
+        var(--color-fondo), var(--color-fondo) 20%, 
+        var(--color-primario) 20%, var(--color-primario) 40%, 
+        var(--color-fondo) 40%, var(--color-fondo) 60%, 
+        var(--color-primario) 60%, var(--color-primario) 80%, 
+        var(--color-fondo) 80%, var(--color-fondo) 100%
+    );
+}
+/* CSS MAIN */
+
+.principal{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    margin: 5px auto;
+    flex-direction: column;
+}
+.post{ 
+    font-size: 1.5em;
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    margin: 50px 5px;
+    
+    /* 
+    justify-content: center;
+    border-radius: 4px;
+    padding: 10px;
+    background-color: var(--color-secundario);
+    box-shadow: 0px -1px 12px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px -1px 12px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px -1px 12px 0px rgba(0,0,0,0.75);     */
+}
+.separador{
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+.post>h2{
+    text-align: center;
+    margin: 30px auto 10px;
+}
+.img-post{
+    width:90%;
+    margin: 0 auto;
+}
+.post>h2+article{
+    text-align: center;
+}
+
+/* CSS PIE */
+.pie{
+    width: 100%;
+    background-color: var(--color-primario);
+    display: flex;
+    flex-direction: column;
+    color: var(--color-fondo);
+}
+.descripcion-pie{
+    padding: 10px;
+    text-align: center;
+    /* width: 100%; */
+    font-size: 1.5em;
+}
+.redes{
+    text-align: end;
+    width: 90%;
+    filter: drop-shadow(1px 1px 5px var(--color-secundario));
+
+}
+.copyright{
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+}
+
+/* CSS MAIN GAMES.HTML */
+
+.img-juego{
+    width: 100%;
+}
+.contenedor-trailer-juego{
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 75%;
+}
+.contenedor-trailer-juego>iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.descripcion-juego{
+    text-align: center;
+}

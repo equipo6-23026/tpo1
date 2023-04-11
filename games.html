@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Testing</title>
+</head>
+<body>
+    <div class="contenedor-global">
+        <header class="cabecera">
+            <div class="logo">
+                <a href="/index.html"><img src="img/logo.png" alt="" class="img-logo"></a> <!-- CAMBIAR POR LOGO EMPRESA -->
+            </div>
+            <div class="contenedor-burger-menu">
+                <button id="btn-burger" onclick="menu_burger()"></button>
+            </div>
+            <!-- FALTA AGREGAR H1 -->
+        </header>
+        <div class="optional">
+            <div id="enlaces-cabecera">
+                <img id="btn-exit" src="img/bx-x.svg" alt="" onclick="salir()">
+                <ul class="lista-enlaces">
+                    <li><a href="/games.html"> Nuestros juegos</a></li>
+                    <li><a href="#"> Sobre nosotros </a></li>
+                    <li><a href="#"> Trabaja con nosotros</a></li>
+                </ul>
+            </div>
+        </div>
+        <main class="principal">
+            <section>
+                <div class="post">
+                    <div class="logo-juego">
+                        <img class="img-juego" src="/img/games/diablo2.png" alt="">
+                    </div>
+                    <div class="contenedor-trailer-juego">
+                        <iframe src="https://www.youtube.com/embed/-2ft5d6_bg8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div class="descripcion-juego">
+                        <p>
+                            El jugador es un héroe que lucha contra el mal que amenaza el mundo de Santuario. Viajando por diferentes lugares, el jugador debe luchar contra hordas de demonios y monstruos, completar misiones y recolectar equipo y habilidades para mejorar su personaje. La historia oscura y siniestra del juego se desarrolla a medida que el jugador avanza en la trama, enfrentándose a jefes poderosos y peligrosos en su camino hacia la victoria. Con una mecánica innovadora de botín y una jugabilidad adictiva 
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <div class="separador"></div>
+            <section>
+                <div class="post">
+                    <div class="logo-juego">
+                        <img class="img-juego" src="/img/games/kotor.png" alt="">
+                    </div>
+                    <div class="contenedor-trailer-juego">
+                        <iframe src="https://www.youtube.com/embed/dBgfXyZviNo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div class="descripcion-juego">
+                        <p>
+                            Ambientado en el universo de Star Wars, miles de años antes de los eventos de la saga de películas, Knights of the Old Republic pone al jugador en el papel de un personaje personalizable que debe viajar por la galaxia, unirse a otros personajes y completar misiones mientras lucha contra enemigos como Sith, droides y criaturas alienígenas. 
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="pie">
+            <div class="descripcion-pie">
+                <p>
+                    Somos <span>Equipo23026</span>, un equipo apasionado por los juegos de rol. 
+                </p>
+                <p>
+                    Nuestra mision es satisfacer las necesidades de los amantes de este género en constante evolución.
+                </p>
+            </div>
+            <div class="redes">
+                <img src="img/bxl-instagram.svg" alt="" class="img-redes">
+                <img src="img/bxl-twitter.svg" alt="" class="img-redes">
+                <img src="img/bxl-youtube.svg" alt="" class="img-redes">
+            </div>
+            <div class="copyright">
+                <p>
+                    Copyright © 2023 Equipo23026
+                </p>
+            </div>
+    </footer>
+</div>
+<script src="main.js"></script>
+</body>
+</html>
