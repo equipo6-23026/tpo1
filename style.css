@@ -19,7 +19,7 @@ nav{
     flex-wrap:wrap;                 
     align-items: center;                         
     height: 10em;
-    background-color: #f1d767;
+    background-color: black;;
 }
 
 
@@ -32,11 +32,11 @@ nav{
 .formulario-busqueda{
     justify-self: left;
     align-self: center;
-    margin: 2.3em 2em 0 2em;
+    margin: 1.2em 2em 0 2em;
     height: 1.5em;
     width: 45%;
     border-radius: 9px;
-    border-color: #f1d767;
+    border-color: black;
     color: black;
 }
 
@@ -44,7 +44,7 @@ nav{
     height: 1.5em;
     width: 100%;
     border-radius: 9px;
-    border-color: #f1d767;
+    border-color: black;
     color: black;
 }
 
@@ -62,11 +62,11 @@ nav{
     grid-area: links;
 }
 .enlaces a{
-    color: black;
+    color: gray;
     text-decoration: none;
 }
 .enlaces a:link{
-    color: black;
+    color: gray;
 }
 .enlaces a:visited{
     color:rgb(150, 117, 34);
@@ -194,10 +194,8 @@ nav{
         display:none;
     }
     .formulario-busqueda{
-        margin-top:-10px; /*resolver de otra forma*/
-        width:70%;
+        margin-bottom:2em; /*resolver de otra forma*/
+        width:75%;
     }
-    .enlaces{display:none;
-        
-    }
+    /* .enlaces{display:none}*/
 }
