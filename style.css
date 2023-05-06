@@ -8,39 +8,68 @@ h2{
     /* color: #0B2447; */
 }
 /* CSS HEADER */
-.navegacion, .pie{
-    display: flex;
-    height: 8vh;
-    background-color: #111;
-    justify-content: space-around;
-    align-items: center;
-    
+
+nav{
+    position:fixed;
+    margin:0;
+    top:0;
+    width:100%;
+    display:flex;   
+    flex-direction: row;
+    flex-wrap:wrap;                 
+    align-items: center;                         
+    height: 10em;
+    background-color: black;;
 }
-.sarasa{
-    margin-left: 0px;
+
+
+.boton-home .logo{
+    margin: 1.8em 0 0 1.7em;
+    height: 5em;
 }
-.logo{
-    margin-left: 4vw;
-    height: 6vh;
-}
-/* FALTA RELATIVIZAR MEDIDAS LOGO */
-.busqueda input{
-    height: 2.5vh;
-    width: 30vw;
-    justify-content: center;
+/* FALTA RELATIVIZAR ALGUNAS MEDIDAS */
+
+.formulario-busqueda{
+    justify-self: left;
+    align-self: center;
+    margin: 1.2em 2em 0 2em;
+    height: 1.5em;
+    width: 45%;
     border-radius: 9px;
+    border-color: black;
+    color: black;
 }
+
+.formulario-busqueda .busqueda{
+    height: 1.5em;
+    width: 100%;
+    border-radius: 9px;
+    border-color: black;
+    color: black;
+}
+
+
+.busqueda:hover, .busqueda:focus{
+    transition:ease-in-out;
+    transition-duration:500ms;
+    border: 3.5px solid black;
+}
+
+::placeholder{color:#484a4c}
+
 .enlaces{
-    margin-right: 4vw;
+    margin-left: 0em;
+    grid-area: links;
 }
 .enlaces a{
+    color: gray;
     text-decoration: none;
 }
 .enlaces a:link{
-    color: currentColor;
+    color: gray;
 }
 .enlaces a:visited{
-    color:currentColor;
+    color:rgb(150, 117, 34);
 }
 
 .enlaces li{
@@ -48,6 +77,15 @@ h2{
     display: inline;
     margin: 0 10px;
 }
+
+.pie{
+    display: flex;
+    height: 8vh;
+    background-color: #f1d767;
+    justify-content: space-around;
+    align-items: center;
+}
+
 
 /* CSS MAIN */
 
@@ -151,3 +189,13 @@ h2{
   }
 
 
+@media (max-width:800px){
+    .logo{position:absolute;
+        display:none;
+    }
+    .formulario-busqueda{
+        margin-bottom:2em; /*resolver de otra forma*/
+        width:75%;
+    }
+    /* .enlaces{display:none}*/
+}
