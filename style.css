@@ -1,28 +1,38 @@
-*{
+@media (max-width:768px){
+    .logo{position:absolute;
+        display:none;
+    }
+    
+    .formulario-busqueda{
+        /* margin-bottom:2em; */ /*resolver de otra forma*/
+        width: 100%;
+        flex: 1 1 70%;
+    }
+    /* .enlaces{display:none}*/
+}
+.total-container{
+    background-color: #222;
+    width: 100%;
+    box-sizing: border-box;
     color: #eee;
 }
-body{
-    background-color: #222;
-}
+
 h2{
     /* color: #0B2447; */
 }
 /* CSS HEADER */
 
-nav{
-    position:fixed;
-    margin:0;
-    top:0;
+.cabecera{
     width:100%;
-    display:flex;   
-    flex-direction: row;
+    display:flex;
     flex-wrap:wrap;                 
     align-items: center;                         
     height: 10em;
     background-color: black;;
 }
-
-
+.boton-home{
+    flex:1 0 0.5;
+}
 .boton-home .logo{
     margin: 1.8em 0 0 1.7em;
     height: 5em;
@@ -30,6 +40,7 @@ nav{
 /* FALTA RELATIVIZAR ALGUNAS MEDIDAS */
 
 .formulario-busqueda{
+    flex: 1 0 0.5;
     justify-self: left;
     align-self: center;
     margin: 1.2em 2em 0 2em;
@@ -58,8 +69,8 @@ nav{
 ::placeholder{color:#484a4c}
 
 .enlaces{
+    flex: 1 1 1;
     margin-left: 0em;
-    grid-area: links;
 }
 .enlaces a{
     color: gray;
@@ -78,6 +89,37 @@ nav{
     margin: 0 10px;
 }
 
+
+/* CSS MAIN */
+.titulo{
+    text-align: center;
+    font-size: 2em;
+}
+
+.titulares{
+    margin: 2em 0;
+    display: flex ;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.game-hightlight{
+    flex: 1 5 33%;
+}
+.portada-highlight{
+    margin: 1em 0;
+    height: 15em;
+    width: 90%;
+}/* FALTA HOVER CON ZOOM,SOMBRA O ALGUNA ANIMACION */
+
+
+
+
+
+
+
+
+/* CSS FOOTER */
+
 .pie{
     display: flex;
     height: 8vh;
@@ -85,14 +127,25 @@ nav{
     justify-content: space-around;
     align-items: center;
 }
+.copyright{
+    color:#222;
+}
+.redes{
+    text-align: end;
+    filter: drop-shadow(1px 1px 5px var(--color-secundario));
+
+}
 
 
-/* CSS MAIN */
 
+
+
+
+
+
+/* 
 .highlights{
-    margin: 3%;
-    text-align: center;
-    font-size: 2em;
+
     font-weight: bold;
     font-style: italic;
 }
@@ -120,9 +173,9 @@ nav{
 }
 .titulares:hover{
    /*  height: 32%; */
-}
+} 
 /* PENDIENTE ZOOM*/
-.seccion-estreno h2{
+/* .seccion-estreno h2{
     font-size: 2em;
     font-weight: bold;
     text-align: center;
@@ -153,9 +206,9 @@ nav{
 .seccion-estreno p{
     margin: 100px;
     /* color: #0B2447; */
-}
+} */
 
-.btn {
+/* .btn {
     margin: 50px;
     display: none;
     background: #1a5075;
@@ -187,15 +240,4 @@ nav{
     background-image: linear-gradient(to bottom, #356c8f, #17496b);
     text-decoration: none;
   }
-
-
-@media (max-width:800px){
-    .logo{position:absolute;
-        display:none;
-    }
-    .formulario-busqueda{
-        margin-bottom:2em; /*resolver de otra forma*/
-        width:75%;
-    }
-    /* .enlaces{display:none}*/
-}
+ */
