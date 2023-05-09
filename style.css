@@ -8,13 +8,16 @@
         width: 100%;
         flex: 1 1 70%;
     }
-    /* .enlaces{display:none}*/
+    /* .enlaces{display:none} y agregar hamburguesa*/
+
+
 }
 .total-container{
     background-color: #222;
     width: 100%;
     box-sizing: border-box;
     color: #eee;
+    font-family: 'Roboto', sans-serif ;
 }
 
 h2{
@@ -30,9 +33,6 @@ h2{
     height: 10em;
     background-color: black;;
 }
-.boton-home{
-    flex:1 0 0.5;
-}
 .boton-home .logo{
     margin: 1.8em 0 0 1.7em;
     height: 5em;
@@ -40,7 +40,6 @@ h2{
 /* FALTA RELATIVIZAR ALGUNAS MEDIDAS */
 
 .formulario-busqueda{
-    flex: 1 0 0.5;
     justify-self: left;
     align-self: center;
     margin: 1.2em 2em 0 2em;
@@ -69,7 +68,6 @@ h2{
 ::placeholder{color:#484a4c}
 
 .enlaces{
-    flex: 1 1 1;
     margin-left: 0em;
 }
 .enlaces a{
@@ -111,8 +109,29 @@ h2{
     width: 90%;
 }/* FALTA HOVER CON ZOOM,SOMBRA O ALGUNA ANIMACION */
 
+.barra-separadora{
+    border: 2px inset #222; height: 1px; width: 80%; margin: auto;
+}
 
-
+.grid-container{
+    display: grid;
+    width: 90%;
+    margin: 1em auto;
+    gap: 1em;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,auto);
+}
+.grid-container .titulo{
+    grid-column: 1 / 4;
+}
+.grid-item{
+    border-radius: 0.1em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
 
 

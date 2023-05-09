@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="style.css">
     <title>
@@ -12,10 +15,8 @@
 </head>
 <body>
     <div class="total-container">
-
         <header>    
-            <nav>
-                <div class="cabecera">
+            <nav class="cabecera">
                     <a class="boton-home" href="index.html"><img class="logo" src="assets/img/sarasa-db-newlogo.svg" alt="">
                     </a>
                     <form action="GET" class="formulario-busqueda">
@@ -26,51 +27,46 @@
                         <li><a href="#">Publica tu review</a></li>
                         <li><a href="#">Acerca de nosotros</a></li>
                     </ul>
-                </div>
             </nav>
         </header>       <!-- FALTA H1 -->
         
         
         <main>
-             <section class="highlights">
+             <section class="grid-container">
                 <h2 class="titulo">Destacados</h2>
-                <div class="titulares">
-                    <div class="game-highlight">
+                    <div class="grid-item">
                         <a href="#"><img class="portada-highlight" src="./assets/reviews/dark-souls/img/portada.jpeg" alt=""></a>
                     </div>
-                    <div class="game-highlight">
+                    <div class="grid-item">
                         <a href="#"><img class="portada-highlight" src="./assets/reviews/dark-souls-2/img/portada.jpg" alt=""></a>
                     </div>
-                    <div class="game-highlight">
+                    <div class="grid-item">
                         <a href="#"><img class="portada-highlight" src="./assets/reviews/dark-souls-3/img/portada.jpg" alt=""></a>
                     </div>
-                </div>
             </section>
-            <div class="barra-separadora"> <!-- dar estilo -->
-            <section class="seccion-analisis">
+            <div class="barra-separadora"> </div><!-- dar estilo -->
+            <section class="grid-container">
                 <h2 class="titulo">Ultimos analisis</h2>
-                <div class="grid-container">
-                    <div class="review">
+                    <div class="grid-item">
                         <a href="#" class="link-review">Dead Island 2</a>
                         <img src="#" alt="" class="portada-review">
-                        <p class="texto-review"></p>
+                        <p class="texto-review">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione architecto aspernatur, corrupti quam natus voluptas aperiam totam dolore maiores deleniti.</p>
                     </div >
-                    <div class="review">
+                    <div class="grid-item">
                         <a href="#" class="link-review">Star Wars Jedi Survivor</a>
                         <img src="" alt="" class="portada-review">
-                        <p class="texto-review"></p>
+                        <p class="texto-review">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione architecto aspernatur, corrupti quam natus voluptas aperiam totam dolore maiores deleniti.</p>
                     </div>
-                    <div class="review">
+                    <div class="grid-item">
                         <a href="#" class="link-review">Redfall</a>
                         <img src="" alt="" class="portada-review">
-                        <p class="texto-review"></p>
+                        <p class="texto-review">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione architecto aspernatur, corrupti quam natus voluptas aperiam totam dolore maiores deleniti.</p>
                     </div>
-                    <div class="review">
+                    <div class="grid-item">
                         <a href="#" class="link-review">Loop Hero</a>
                         <img src="" alt="" class="portada-review">
-                        <p class="texto-review"></p> <!-- Generalizar estilo de enlaces -->
+                        <p class="texto-review">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione architecto aspernatur, corrupti quam natus voluptas aperiam totam dolore maiores deleniti.</p> <!-- Generalizar estilo de enlaces -->
                     </div>  
-                </div>
             </section> 
         </main>
         <footer>
