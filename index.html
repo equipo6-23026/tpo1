@@ -4,66 +4,60 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="reset.css"> -->
-    <link rel="stylesheet" href="style.css">
-    <title>Vaireview</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=VT323" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>
+        SarasaDB
+    </title>
 </head>
 <body>
     <header>    
+        <a class="boton-home" href="index.html">
+            <img class="logotipo" src="assets/img/sarasa-db-logotipo.svg" alt="">
+             <img class="isotipo" src="assets/img/sarasa-db-isotipo.svg" alt="">
+         </a>
+        <form action="GET" class="formulario-busqueda">
+            <input class="busqueda" type="text"placeholder=" Buscar juego"name="search"/>
+        </form>
         <nav>
-            <a class="boton-home" href="index.html"><img class="logo" src="assets/img/sarasa-db-newlogo.svg" alt=""></a>
-            <form action="GET" class="formulario-busqueda">
-                <input class="busqueda" type="text"placeholder=" Buscar juego"name="search"/>
-            </form>
-            
-
+            <div class="contenedor-enlaces">
             <ul class="enlaces">
-                <li><a href="#">Categorias</a></li>
                 <li><a href="#">Noticias</a></li>
-                <li><a href="#">Acerca de nosotros?</a></li>
+                <li><a href="#">Publica tu review</a></li>
+                <li><a href="#">Acerca de nosotros</a></li>
             </ul>
-
-            <!-- FALTA H1 -->
+            </div>
         </nav>
-    </header>
+    </header>       <!-- FALTA H1 -->
+
     <main>
-        <section class="highlights">
-            <h2>Destacadas</h2>
-            <div class="titulares">
-                <div class="movie-highligh">
-                    <a href="#"><img  src="assets/img/episode1.jpg" alt=""></a>
-                </div>
-                <div class="movie-highligh">
-                    <a href="#"><img src="assets/img/episode2.jpg" alt=""></a>
-                </div>
-                <div class="movie-highligh">
-                    <a href="#"><img src="assets/img/episode3.jpg" alt=""></a>
-                </div>
+        <section class="destacados" name="destacados">
+            <h2 class="nombre-seccion">Destacados</h2>
+            <div class="contenedor-botones-y-titulo">
+                <button class="boton-atras"> atras </button>
+                <p class="titulo">Dark Souls</p>
+                <button class="boton-adelante"> adelante </button>
             </div>
+            
+            <a class="portada" href="#">
+                <img class="portada-highlight" src="./assets/reviews/dark-souls/img/portada.jpeg" alt="">
+            </a>
+            <p class="review">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
         </section>
-        <section class="seccion-estreno">
-            <h2>Ultimos estrenos</h2>
-            <ul>
-                <div class="estrenos"><button class="btn">Ver reseña</button><li>Dungeons & Dragons</li></div>  
-                <div class="estrenos"><button class="btn">Ver reseña</button><li>Super Mario Bross</li></div>
-                <div class="estrenos"><button class="btn">Ver reseña</button><li>John Wick 4</li></div>
-                <div class="estrenos"><button class="btn">Ver reseña</button><li>13 exorcismos</li></div>
-                <div class="estrenos"><button class="btn">Ver reseña</button><li>¡Shazam! La furia de los dioses</li></div>
-                <div class="estrenos"><button class="btn">Ver reseña</button><li>La ballena</li></div>
-                <div class="estrenos"><button class="btn">Ver reseña</button><li>Scream VI</li></div>
-                <div class="estrenos"><button class="btn">Ver reseña</button><li>Creed III</li></div>
-            </ul>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi in ipsum distinctio cumque quae a cupiditate quis fugit facilis neque placeat tempora, sint reiciendis, nulla rerum sed ea minus itaque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos rerum quis voluptatem dolorum numquam voluptatum et repudiandae perferendis, dolorem corporis, debitis nulla asperiores fuga, non assumenda minima earum nam inventore!
-            </p>
-        </section>
+       <hr class="barra-espaciadora">
     </main>
+
     <footer>
-        <div class="pie">
-            <div class="copyright">
-                <p>Derechos reservados sarasa corp.</p>
-            </div>
-            <div class="contacto"><p>loguitos redes</p></div>
-        </div>
+        <p class="copyright">Derechos reservados sarasa corp.</p>
+        <div class="redes">
+            <img src="./assets/img/instagram-logo-24.png" alt="" class="img-redes">
+            <img src="./assets/img/twitter-logo-24.png" alt="" class="img-redes">
+            <img src="./assets/img/youtube-logo-24.png" alt="" class="img-redes">
+        </div>   
     </footer>
 </body>
 </html>
