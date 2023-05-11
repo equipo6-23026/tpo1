@@ -17,7 +17,8 @@ header{padding: 2em 0 2em;
 .contenedor-enlaces{
     box-sizing: border-box;
     margin:auto;
-    width:10%;
+    width:20%;
+    min-width: 12em;
 }
 
 
@@ -70,22 +71,32 @@ main{
 
 .busqueda{
     width:20%;
+    min-width:12em;
 }
 
 #destacados{
     display:grid;
     grid-template-areas: "nombre-seccion nombre-seccion nombre-seccion"
-                         "titulo titulo titulo"
-                         "atras portada adelante"
+                         "atras titulo adelante"
+                         "portada portada portada"
                          "review review review"
 }
 
 .nombre-seccion{grid-area:nombre-seccion}
-.titulo{grid-area:titulo}
 .boton-atras{grid-area:atras}
-.portada{grid-area:portada}
+.titulo{grid-area:titulo}
 .boton-adelante{grid-area:adelante}
+.portada{grid-area:portada}
 .review{grid-area:review}
+
+.titulo{
+    display:inline;
+}
+
+.boton-atras, .boton-adelante{
+    width:6em;
+}
+
 
 .portada-highlight{
     height:30em;
