@@ -1,0 +1,98 @@
+html{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    color: white;
+    font-family: 'VT323', 'Roboto', sans-serif;
+    font-size:1em;
+}
+
+
+header{padding: 2em 0 2em;
+    text-align: center;
+}
+
+.contenedor-enlaces{
+    box-sizing: border-box;
+    margin:auto;
+    width:10%;
+}
+
+
+li a{
+    display:block;
+    text-decoration: none;
+    color: white;
+}
+
+li a:hover{
+    background-color:#5599BB;
+}
+
+ul{
+    list-style-type: none;
+    padding-left:0;
+}
+
+ul li a{
+    /*background-color: blue;*/
+    width: 100%;
+}
+
+.boton-home{
+    display: block;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    background-color: black;
+}
+
+.logotipo, .isotipo{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    height:5em;
+}
+
+main{
+    text-align: center;
+}
+
+.boton-home{
+    text-decoration: none;
+}
+
+.formulario-busqueda{
+    padding: 1em 0;
+}
+
+.busqueda{
+    width:20%;
+}
+
+#destacados{
+    display:grid;
+    grid-template-areas: "nombre-seccion nombre-seccion nombre-seccion"
+                         "titulo titulo titulo"
+                         "atras portada adelante"
+                         "review review review"
+}
+
+.nombre-seccion{grid-area:nombre-seccion}
+.titulo{grid-area:titulo}
+.boton-atras{grid-area:atras}
+.portada{grid-area:portada}
+.boton-adelante{grid-area:adelante}
+.review{grid-area:review}
+
+.portada-highlight{
+    height:30em;
+}
+
+footer{
+    margin-top: 8em;
+    margin-bottom: 10em;
+    text-align: center;
+}

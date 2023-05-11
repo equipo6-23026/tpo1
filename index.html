@@ -7,80 +7,54 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=VT323" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/styles.css">
     <title>
         SarasaDB
     </title>
 </head>
 <body>
-    <div class="total-container">
-        <header>    
-            <nav class="cabecera">
-                    <a class="boton-home" href="index.html"><img class="logo" src="assets/img/sarasa-db-newlogo.svg" alt="">
-                    </a>
-                    <form action="GET" class="formulario-busqueda">
-                        <input class="busqueda" type="text"placeholder=" Buscar juego"name="search"/>
-                    </form>
-                    <ul class="enlaces">
-                        <li><a href="#">Noticias</a></li>
-                        <li><a href="#">Publica tu review</a></li>
-                        <li><a href="#">Acerca de nosotros</a></li>
-                    </ul>
-            </nav>
-        </header>       <!-- FALTA H1 -->
-        
-        
-        <main>
-             <section class="grid-container">
-                <h2 class="titulo">Destacados</h2>
-                    <div class="grid-item">
-                        <a href="#"><img class="portada-highlight" src="./assets/reviews/dark-souls/img/portada.jpeg" alt=""></a>
-                    </div>
-                    <div class="grid-item">
-                        <a href="#"><img class="portada-highlight" src="./assets/reviews/dark-souls-2/img/portada.jpg" alt=""></a>
-                    </div>
-                    <div class="grid-item">
-                        <a href="#"><img class="portada-highlight" src="./assets/reviews/dark-souls-3/img/portada.jpg" alt=""></a>
-                    </div>
-            </section>
-            <div class="barra-separadora"> </div><!-- dar estilo -->
-            <section class="grid-container">
-                <h2 class="titulo">Ultimos analisis</h2>
-                    <div class="grid-item">
-                        <a href="#" class="link-review">Dead Island 2</a>
-                        <img src="#" alt="" class="portada-review">
-                        <p class="texto-review">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione architecto aspernatur, corrupti quam natus voluptas aperiam totam dolore maiores deleniti.</p>
-                    </div >
-                    <div class="grid-item">
-                        <a href="#" class="link-review">Star Wars Jedi Survivor</a>
-                        <img src="" alt="" class="portada-review">
-                        <p class="texto-review">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione architecto aspernatur, corrupti quam natus voluptas aperiam totam dolore maiores deleniti.</p>
-                    </div>
-                    <div class="grid-item">
-                        <a href="#" class="link-review">Redfall</a>
-                        <img src="" alt="" class="portada-review">
-                        <p class="texto-review">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione architecto aspernatur, corrupti quam natus voluptas aperiam totam dolore maiores deleniti.</p>
-                    </div>
-                    <div class="grid-item">
-                        <a href="#" class="link-review">Loop Hero</a>
-                        <img src="" alt="" class="portada-review">
-                        <p class="texto-review">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione architecto aspernatur, corrupti quam natus voluptas aperiam totam dolore maiores deleniti.</p> <!-- Generalizar estilo de enlaces -->
-                    </div>  
-            </section> 
-        </main>
-        <footer>
-            <div class="pie">
-                <div class="copyright">
-                    <p>Derechos reservados sarasa corp.</p>
-                </div>
-                <div class="redes">
-                    <img src="./assets/img/instagram-logo-24.png" alt="" class="img-redes">
-                    <img src="./assets/img/twitter-logo-24.png" alt="" class="img-redes">
-                    <img src="./assets/img/youtube-logo-24.png" alt="" class="img-redes">
-                </div>
+    <header>    
+        <a class="boton-home" href="index.html">
+            <img class="logotipo" src="assets/img/sarasa-db-logotipo.svg" alt="">
+             <img class="isotipo" src="assets/img/sarasa-db-isotipo.svg" alt="">
+         </a>
+        <form action="GET" class="formulario-busqueda">
+            <input class="busqueda" type="text"placeholder=" Buscar juego"name="search"/>
+        </form>
+        <nav>
+            <div class="contenedor-enlaces">
+            <ul class="enlaces">
+                <li><a href="#">Noticias</a></li>
+                <li><a href="#">Publica tu review</a></li>
+                <li><a href="#">Acerca de nosotros</a></li>
+            </ul>
             </div>
-        </footer>
-    </div>
+        </nav>
+    </header>       <!-- FALTA H1 -->
+
+    <main>
+        <section class="destacados" name="destacados">
+            <h2 class="nombre-seccion">Destacados</h2>
+            <p class="titulo">Dark Souls</p>
+            <button class="boton-atras"> atras </button>
+            <a class="portada" href="#">
+                <img class="portada-highlight" src="./assets/reviews/dark-souls/img/portada.jpeg" alt="">
+            </a>
+            <button class="boton-adelante"> adelante </button>
+            <p class="review">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+        </section>
+       <hr class="barra-espaciadora">
+    </main>
+
+    <footer>
+        <p class="copyright">Derechos reservados sarasa corp.</p>
+        <div class="redes">
+            <img src="./assets/img/instagram-logo-24.png" alt="" class="img-redes">
+            <img src="./assets/img/twitter-logo-24.png" alt="" class="img-redes">
+            <img src="./assets/img/youtube-logo-24.png" alt="" class="img-redes">
+        </div>   
+    </footer>
 </body>
 </html>
