@@ -1,78 +1,93 @@
+:root{
+    --review-width:16em;
+    --color-texto:#FFFFFF;
+    --hover-color:#5599BB;
+    --color-fondo:black;
+}
+
 html{
-    box-sizing: border-box;
+    box-sizing: border-box
 }
 
 body{
-    background-color: black;
-    color: white;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
     font-family: 'VT323', 'Roboto', sans-serif;
-    font-size:1em;
+    font-size:1em
 }
 
 
 header{padding: 2em 0 2em;
-    text-align: center;
+    padding:0;
+    text-align: center
 }
 
 .contenedor-enlaces{
     box-sizing: border-box;
     margin:auto;
     width:20%;
-    min-width: 12em;
+    min-width: 12em
 }
 
 
 li a{
     display:block;
     text-decoration: none;
-    color: white;
+    color: var(--color-texto)
 }
 
-li a:hover{
-    background-color:#5599BB;
+li a:hover, .boton-atras:hover, .boton-adelante:hover{
+    background-color:var(--hover-color);
+    transition: 0.5s;
+}
+
+
+li a:active, .boton-atras:active, .boton-adelante:active{
+    animation: parpadeo 0.1s linear 2;
+}
+
+@keyframes parpadeo {
+    50% {opacity:0}
 }
 
 ul{
     list-style-type: none;
-    padding-left:0;
+    padding-left:0
 }
 
 ul li a{
-    /*background-color: blue;*/
-    width: 100%;
+    width: 100%
 }
 
-.boton-home{
+.link-home{
     display: block;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
     background-color: black;
+    text-decoration: none;
 }
 
 .logotipo, .isotipo{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    height:5em;
+    height:5em
 }
 
 main{
-    text-align: center;
-}
-
-.boton-home{
-    text-decoration: none;
+    text-align: center
 }
 
 .formulario-busqueda{
-    padding: 1em 0;
+    padding: 1em 0
 }
 
 .busqueda{
     width:20%;
-    min-width:12em;
+    min-width:12em
 }
+
 
 #destacados{
     display:grid;
@@ -83,23 +98,31 @@ main{
 }
 
 .nombre-seccion{grid-area:nombre-seccion}
-.boton-atras{grid-area:atras}
+.boton-atras{grid-area:atras;}
 .titulo{grid-area:titulo}
 .boton-adelante{grid-area:adelante}
 .portada{grid-area:portada}
 .review{grid-area:review}
 
+.boton-atras, .boton-adelante{
+    background-color:black;
+    border-style: none;
+    color:var(--color-texto);
+    font-size: 3em;
+    width: 1.8em;
+}
+
 .titulo{
     display:inline;
 }
 
-.boton-atras, .boton-adelante{
-    width:6em;
+.portada-highlight{
+    width:var(--review-width)
 }
 
-
-.portada-highlight{
-    height:30em;
+.review{
+    width:var(--review-width);
+    margin: auto;
 }
 
 footer{
