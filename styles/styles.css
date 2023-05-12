@@ -2,6 +2,7 @@
     --review-width:16em;
     --color-texto:#FFFFFF;
     --hover-color:#5599BB;
+    --color-fondo:black;
 }
 
 html{
@@ -9,7 +10,7 @@ html{
 }
 
 body{
-    background-color: black;
+    background-color: var(--color-fondo);
     color: var(--color-texto);
     font-family: 'VT323', 'Roboto', sans-serif;
     font-size:1em
@@ -38,6 +39,15 @@ li a{
 li a:hover, .boton-atras:hover, .boton-adelante:hover{
     background-color:var(--hover-color);
     transition: 0.5s;
+}
+
+
+li a:active, .boton-atras:active, .boton-adelante:active{
+    animation: parpadeo 0.1s linear 2;
+}
+
+@keyframes parpadeo {
+    50% {opacity:0}
 }
 
 ul{
