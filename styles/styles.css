@@ -163,3 +163,37 @@ footer{
     margin-bottom: 10em;
     text-align: center;
 }
+
+
+
+
+.contenedor-barras{
+    height:2em;
+    width: 2em;
+    position:relative;
+    margin-left:auto;
+    margin-right:0;
+    
+}
+
+.bar {
+    padding: 0;
+    width: 30px;
+    height: 4px;
+    background-color: var(--color-texto);
+    display: block;
+    border-radius: 4px;
+    transition: all 0.4s ease-in-out;
+    position: absolute; 
+}
+
+.bar1 {
+    top: 0;
+}
+
+.bar2 {
+    top: 10px;
+}
+.bar3 {
+    top: 20px;
+}
