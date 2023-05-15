@@ -1,22 +1,20 @@
 /* LOGICA SWITCH FORMULARIOS ENTRE LOGIN/REVIEW */
 let formReview = `
-        
-        <form action="" method="post" id="formReview">
-        <label for="usuario">Tu usuario Sarasa</label>
-            <div>
+        <label for="username">Tu usuario Sarasa</label>
+          <div class="form-review-item">
             <input
               type="text"
               name="usuario"
-              placeholder="Usuario"
-              id="usuario"
-              required
+              id="username"
+              disabled
+              value=`+sessionStorage.getItem('userName')+`
             />
           </div>
-            <br>
+          <br>
           <label for="basic-url">
             Tu perfil de Steam/PS/Xbox/Nintendo
           </label>
-          <div>
+          <div class="form-review-item">
             <span for="basic-url">
               http://steamcommunity.com/profiles/
             </span>
@@ -24,22 +22,24 @@ let formReview = `
               type="text"
               id="basic-url"
               placeholder="12341234"
+              required
             />
           </div>
           <br>
           <label for="titulo">Titulo del Videojuego</label>
-          <div>
-            <input id="titulo" type="text">
+          <div class="form-review-item">
+            <input id="titulo" type="text" required>
           </div>
           <br>
           <label for="inputGroupFile02">
             Añadi tus capturas de pantalla
           </label>
-          <div>
+          <div class="form-review-item">
             <input type="file" id="inputGroupFile02" />
           </div>
           <br>
 
+          <div class="form-review-item">
           <p>Plataformas: </p>
           <div>
             <input
@@ -79,46 +79,43 @@ let formReview = `
               >Nintendo
             </label>
           </div>
+          </div>
             <br>
-          <div class="input-group">
+          <div class="form-review-item">
             <p>Reseña</p>
             <textarea
               cols=40
               rows=10
               id="resena"
-              required
             ></textarea>
           </div>
           <br>
           <button type="submit">Enviar</button>
-          
-          </form> 
-          <p id="alerta"></p>
-        
 `
 let loginError = `
-<form onsubmit="../formReview.html" id="formLogin" method="post">
-<div>
+<div class="form-login-item">
     <label for="usuario">Usuario:</label>
-    <input type="text" name="usuario" id="usuario">
+    <input type="text" name="usuario" id="usuario" required>
 </div>
-<div>
+
+<div class="form-login-item">
     <label for="contrasena">Contraseña:</label>
-    <input type="password" name="contrasena" id="contrasena">
+    <input type="password" name="contrasena" id="contrasena" required>
 </div>
 <button onclick=login()>Enviar</button>
-</form>
 `
-let bool = new Boolean();
-
-
-window.addEventListener('load', switchingForm());
-
+let log = false;
+let bool = false;
 function switchingForm(){
-let log = new Boolean(sessionStorage.getItem('logueado'));
-  if (log == true){
-    document.getElementById('contenedor-review').innerHTML=formReview;
-  } else{
-    document.getElementById('contenedor-review').innerHTML=loginError;
+  let principal = document.getElementById("formReview");
+  principal.innerHTML="";
+  log = sessionStorage.getItem('logueado');
+    if (log === 'true'){
+      principal.innerHTML=formReview;
+      validando();
+     } else{
+      principal.innerHTML=loginError;
+    }
   }
-}
+window.addEventListener("load", switchingForm());
+

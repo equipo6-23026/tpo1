@@ -1,12 +1,15 @@
 function login(){
+    sessionStorage.removeItem('logueado');
+    sessionStorage.removeItem('userName');
     let usuario = document.getElementById("usuario").value;
     let contrasena = document.getElementById("contrasena").value;
     if ((usuario === 'vairo') && (contrasena === '1234') || 
     (usuario === 'cris') && (contrasena === '1234')){
-        bool = true;
-        sessionStorage.setItem('logueado',bool);
+        sessionStorage.setItem('logueado',true);
+        sessionStorage.setItem('userName',usuario)
     } else {
-        bool=false;
-        sessionStorage.setItem('logueado',bool);
+        sessionStorage.setItem('logueado',false);
+        document.getElementById('warning').innerHTML=`Error: Usuario/Contraseña incorrectos`;
     }
+
 }
