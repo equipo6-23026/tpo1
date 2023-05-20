@@ -9,7 +9,7 @@ function login(){
         sessionStorage.setItem('userName',usuario)
     } else {
         sessionStorage.setItem('logueado',false);
-        document.getElementById('warning').innerHTML=`Error: Usuario/Contraseña incorrectos`;
+        document.getElementById('warning').innerHTML=`Error: Usuario/Contraseña incorrectos`; //no funciona, arreglar estructurandolo igual que el validador de review, con eventlistener submit y preventdefault?;
     }
 
 }

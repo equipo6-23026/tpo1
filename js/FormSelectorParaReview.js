@@ -1,6 +1,6 @@
 /* LOGICA SWITCH FORMULARIOS ENTRE LOGIN/REVIEW */
 let formReview = `
-        <label for="username">Tu usuario Sarasa</label>
+        <label for="username">Tu usuario Sarasa </label>
           <div class="form-review-item">
             <input
               type="text"
@@ -12,7 +12,7 @@ let formReview = `
           </div>
           <br>
           <label for="basic-url">
-            Tu perfil de Steam/PS/Xbox/Nintendo
+            Tu perfil de Steam/PS/Xbox/Nintendo (8 digitos, sin letras)
           </label>
           <div class="form-review-item">
             <span for="basic-url">
@@ -26,7 +26,7 @@ let formReview = `
             />
           </div>
           <br>
-          <label for="titulo">Titulo del Videojuego</label>
+          <label for="titulo">Titulo del Videojuego (Minimo 1 letra)</label>
           <div class="form-review-item">
             <input id="titulo" type="text" required>
           </div>
@@ -82,7 +82,7 @@ let formReview = `
           </div>
             <br>
           <div class="form-review-item">
-            <p>Reseña</p>
+            <p>Reseña (Minimo: 10 palabras)</p>
             <textarea
               cols=40
               rows=10
