@@ -9,30 +9,52 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=VT323" rel="stylesheet">
     <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/styles.css">  
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <script src="./js/botonmenu.js"></script>
+
+
     <title>
         SarasaDB
     </title>
 </head>
 <body>
-    <header>    
+
+
+    <header>
+        <div class="contenedor-hamburguesa">
+
+            <div class="contenedor-barras" onclick="menuAbreCierra()">
+                <span class="bar bar1"></span>
+                <span class="bar bar2"></span>
+                <span class="bar bar3"></span>
+            </div>
+    
+
+            <nav>
+                <div id="contenedor-enlaces" class="contenedor-enlaces">
+                <ul class="enlaces">
+                    <li><a href="#">Noticias</a></li>
+                    <li><a href="./publica-tu-review.html">Publica tu review</a></li>
+                    <li><a href="#">Acerca de nosotros</a></li>
+                </ul>
+                </div>
+            </nav>
+         </div>
+
+
+        
         <a class="link-home" href="index.html">
             <img class="logotipo" src="assets/img/sarasa-db-logotipo.svg" alt="">
              <img class="isotipo" src="assets/img/sarasa-db-isotipo.svg" alt="">
          </a>
+
         <form action="GET" class="formulario-busqueda">
             <input class="busqueda" type="text"placeholder=" Buscar juego"name="search"/>
         </form>
-        <nav>
-            <div class="contenedor-enlaces">
-            <ul class="enlaces">
-                <li><a href="#">Noticias</a></li>
-                <li><a href="./publica-tu-review.html">Publica tu review</a></li>
-                <li><a href="#">Acerca de nosotros</a></li>
-            </ul>
-            </div>
-        </nav>
+
     </header>       <!-- FALTA H1 -->
+
 
     <main>
         <section class="destacados" name="destacados">
@@ -51,6 +73,7 @@
        <hr class="barra-espaciadora">
     </main>
 
+    
     <footer>
         <p class="copyright">Derechos reservados sarasa corp.</p>
         <div class="redes">

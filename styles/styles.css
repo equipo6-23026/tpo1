@@ -18,17 +18,15 @@ body{
 
 
 header{padding: 2em 0 2em;
-    padding:0;
-    text-align: center
+    text-align: center;
 }
 
-.contenedor-enlaces{
-    box-sizing: border-box;
-    margin:auto;
-    width:20%;
-    min-width: 12em
+nav{
+    position:relative;
 }
 
+i { color: var(--color-texto);
+}
 
 li a{
     display:block;
@@ -59,12 +57,51 @@ ul li a{
     width: 100%
 }
 
+main{
+    text-align: center
+}
+
+.contenedor-hamburguesa{
+    display:block;
+    width:var(--review-width);
+    box-sizing:border-box;
+    padding:0;
+    margin:auto;
+    background-color:var(--color-fondo);
+}
+
+#boton-menu{
+    display:block;
+    box-sizing: border-box;
+    width: 2em;
+    height: 2em;
+    margin-left:auto;
+    margin-right:0;
+    position:relative;
+    justify-self: right;
+    border-style:none;
+    background-color: var(--color-fondo);
+}
+
+#contenedor-enlaces{
+    position:absolute;
+    background-color:var(--color-fondo);
+    box-sizing: border-box;
+    border-style:ridge;
+    border-radius: 5%;
+    margin:auto;
+    width:var(--review-width);
+    min-width: 12em;
+    display:none;
+}
+
+
 .link-home{
-    display: block;
+    display: inline;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    background-color: black;
+    background-color: var(--color-fondo);
     text-decoration: none;
 }
 
@@ -72,11 +109,7 @@ ul li a{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    height:5em
-}
-
-main{
-    text-align: center
+    height:4em
 }
 
 .formulario-busqueda{
@@ -126,7 +159,41 @@ main{
 }
 
 footer{
-    margin-top: 8em;
+    margin-top: 3em;
     margin-bottom: 10em;
     text-align: center;
+}
+
+
+
+
+.contenedor-barras{
+    height:2em;
+    width: 2em;
+    position:relative;
+    margin-left:auto;
+    margin-right:0;
+    
+}
+
+.bar {
+    padding: 0;
+    width: 30px;
+    height: 4px;
+    background-color: var(--color-texto);
+    display: block;
+    border-radius: 4px;
+    transition: all 0.4s ease-in-out;
+    position: absolute; 
+}
+
+.bar1 {
+    top: 0;
+}
+
+.bar2 {
+    top: 10px;
+}
+.bar3 {
+    top: 20px;
 }
