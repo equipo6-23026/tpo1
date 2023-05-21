@@ -5,7 +5,7 @@ function removerEspacios(texto){
   cantPalabrasFinal = textoFinal.split(' ');
   return cantPalabrasFinal.length
 }
-const myReUsuario = new RegExp(/^[a-z0-9][a-z0-9_]{4,10}$/)
+const myReUsuario = new RegExp(/^[a-z0-9][a-z0-9_]{3,10}$/)
 /* Solo letras y numeros, acepta guion bajo pero no al principio, entre 4 
 y 10 caracteres */
 const myReTitulo = new RegExp(/^(?=.*[a-zA-Z])[a-zA-Z0-9\s\-!&'():]+$/)
