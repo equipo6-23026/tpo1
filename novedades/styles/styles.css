@@ -26,17 +26,18 @@ body{
     width:4em;
 
 }
-
+/* 
 .boton-atras:hover, .boton-adelante:hover{
     background-color:var(--hover-color);
     transition: 0.5s;
-}
+} */
 
 .boton-atras:active, .boton-adelante:active{
-    animation: parpadeo 0.1s linear 2;
+    animation: parpadeo 0.1s linear 3;
 }
 
 @keyframes parpadeo {
+    0% {background-color: var(--hover-color)}
     50% {opacity:0}
 }
 
