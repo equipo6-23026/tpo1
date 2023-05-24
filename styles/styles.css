@@ -34,17 +34,18 @@ li a{
     color: var(--color-texto)
 }
 
-li a:hover{
+/* li a:hover{
     background-color:var(--hover-color);
     transition: 0.5s;
-}
+} */
 
 
 li a:active{
-    animation: parpadeo 0.1s linear 2;
+    animation: parpadeo 0.1s linear 3;
 }
 
 @keyframes parpadeo {
+    0% {background-color: var(--hover-color)}
     50% {opacity:0}
 }
 
@@ -54,7 +55,9 @@ ul{
 }
 
 ul li a{
-    width: 100%
+    width: 100%;
+    font-size: 1.5em;
+    padding: 2em 0;
 }
 
 main{
