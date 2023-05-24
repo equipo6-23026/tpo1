@@ -34,9 +34,9 @@
             <nav>
                 <div id="contenedor-enlaces" class="contenedor-enlaces">
                 <ul class="enlaces">
-                    <li><a href="#">Noticias</a></li>
-                    <li><a href="./publica-tu-review.html">Publica tu review</a></li>
-                    <li><a href="#">Acerca de nosotros</a></li>
+                    <li><a href="./noticias/noticias.html" target="iframe-contenido">Noticias</a></li>
+                    <li><a href="./publica-tu-review/publica-tu-review.html" target="iframe-contenido">Publica tu review</a></li>
+                    <li><a href="./acerca-de-nosotros/acerca-de-nosotros.html" target="iframe-contenido">Acerca de nosotros</a></li>
                 </ul>
                 </div>
             </nav>
@@ -44,7 +44,7 @@
 
 
         
-        <a class="link-home" href="index.html">
+        <a class="link-home" href="./novedades/novedades.html" target="iframe-contenido">
             <img class="logotipo" src="assets/img/sarasa-db-logotipo.svg" alt="">
              <img class="isotipo" src="assets/img/sarasa-db-isotipo.svg" alt="">
          </a>
@@ -57,20 +57,8 @@
 
 
     <main>
-        <section class="destacados" name="destacados">
-            <h2 class="nombre-seccion">Destacados</h2>
-            <div class="contenedor-botones-y-titulo">
-                <button class="boton-atras"> <span class="flecha">&#60</span> </button>
-                <p class="titulo">Dark Souls</p>
-                <button class="boton-adelante"> <span class="flecha">&#62</span> </button>
-            </div>
-            
-            <a class="portada" href="#">
-                <img class="portada-highlight" src="./assets/reviews/dark-souls/img/portada.jpeg" alt="">
-            </a>
-            <p class="review">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-        </section>
-       <hr class="barra-espaciadora">
+        <iframe name="iframe-contenido" id="iframe-contenido"src="./novedades/novedades.html"></iframe>       
+        <hr class="barra-espaciadora">
     </main>
 
     

@@ -1,0 +1,17 @@
+:root{
+    --review-width:16em;
+    --color-texto:#FFFFFF;
+    --hover-color:#5599BB;
+    --color-fondo:black;
+}
+
+html{
+    box-sizing: border-box
+}
+
+body{
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: 'VT323', 'Roboto', sans-serif;
+    font-size:1em
+}
