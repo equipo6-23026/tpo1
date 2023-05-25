@@ -57,7 +57,7 @@ ul{
 ul li a{
     width: 100%;
     font-size: 1.5em;
-    padding: 2em 0;
+    padding: 1.5em 0;
 }
 
 main{
@@ -172,5 +172,63 @@ footer{
     width:auto;
     height: 30em;
     border-style: none;
+
+}
+
+@media (min-width:480px) and (max-width: 760px){
+    header{
+        display:flex;
+        justify-content:baseline;
+        flex-direction: row;
+    }
+
+    .link-home{
+        order:1;
+        position:relative;
+        display: inline;
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        width:10%;
+        background-color: var(--color-fondo);
+        text-decoration: none;
+    }
+
+    .isotipo{
+        display:none;
+    }
+
+    .formulario-busqueda, .busqueda{
+        order:2;
+        width:85%;
+
+    }
+ 
+    .contenedor-hamburguesa{
+        order:3;
+        width:16em;
+        position: absolute;
+        z-index: 999;
+        right:0;
+        top:3em;
+        background-color: transparent;
+        display: inline-block;
+        box-sizing:border-box;
+        padding:0;
+        margin-right: 1em;
+    }
+ 
+    #contenedor-enlaces{
+        position:absolute;
+        background-color:var(--color-fondo);
+        box-sizing: border-box;
+        border-style:ridge;
+        border-radius: 5%;
+        top:0;
+        width:var(--review-width);
+        min-width: 12em;
+
+        display:none;
+    }
 
 }
