@@ -102,7 +102,7 @@ let loginError = `
     <label for="contrasena">Contraseña:</label>
     <input type="password" name="contrasena" id="contrasena" required>
 </div>
-<button onclick=login()>Enviar</button>
+<button type=submit()>Enviar</button>
 `
 let log = false;
 let bool = false;
@@ -115,6 +115,7 @@ function switchingForm(){
       validando();
      } else{
       principal.innerHTML=loginError;
+      login();
     }
   }
 window.addEventListener("load", switchingForm());
