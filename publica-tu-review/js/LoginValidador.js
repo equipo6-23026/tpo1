@@ -19,3 +19,8 @@ function login(){
 
     })
 }
+
+function logout(){
+    sessionStorage.removeItem('logueado');
+    sessionStorage.removeItem('userName');
+}

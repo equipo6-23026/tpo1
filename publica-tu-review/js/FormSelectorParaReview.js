@@ -91,7 +91,9 @@ let formReview = `
           </div>
           <br>
           <button type="submit">Enviar</button>
-`
+          <div><a href="" onclick="logout()">Cerrar Sesion</div> 
+`/* FALTA PONERLES CLASES */
+
 let loginError = `
 <div class="form-login-item">
     <label for="usuario">Usuario:</label>
