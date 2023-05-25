@@ -175,7 +175,7 @@ footer{
 
 }
 
-@media (min-width:480px) and (max-width: 720px){
+@media (min-width:480px) and (max-width: 760px){
     header{
         display:flex;
         justify-content:baseline;
