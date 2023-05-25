@@ -40,15 +40,6 @@ li a{
 } */
 
 
-li a:active{
-    animation: parpadeo 0.1s linear 3;
-}
-
-@keyframes parpadeo {
-    0% {background-color: var(--hover-color)}
-    50% {opacity:0}
-}
-
 ul{
     list-style-type: none;
     padding-left:0
@@ -59,6 +50,16 @@ ul li a{
     font-size: 1.5em;
     padding: 1.5em 0;
 }
+
+li a:active{
+    animation: parpadeo 0.1s linear 3;
+}
+
+@keyframes parpadeo {
+    0% {background-color: var(--hover-color)}
+    50% {opacity:0}
+}
+
 
 main{
     text-align: center
