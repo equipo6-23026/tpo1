@@ -92,7 +92,7 @@ hr{
     background-color: var(--color-fondo);
 }
 
-#contenedor-enlaces{
+.contenedor-enlaces{
     position:absolute;
     background-color:var(--color-fondo);
     box-sizing: border-box;
@@ -101,7 +101,11 @@ hr{
     margin:auto;
     width:var(--review-width);
     min-width: 12em;
-    display:none;
+    transition: opacity .7s;
+}
+
+.contenedor-enlaces--oculto{
+    opacity:0;
 }
 
 
@@ -219,17 +223,4 @@ footer{
         margin-right: 1em;
     }
  
-    #contenedor-enlaces{
-        position:absolute;
-        background-color:var(--color-fondo);
-        box-sizing: border-box;
-        border-style:ridge;
-        border-radius: 5%;
-        top:0;
-        width:var(--review-width);
-        min-width: 12em;
-
-        display:none;
-    }
-
 }
