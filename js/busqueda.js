@@ -1,6 +1,6 @@
 function seParecen(str1, str2){
     var puntaje_de_parecido = 0;
-    if ((String(str1).toUpperCase() == String(str2).toUpperCase))
+    if ((String(str1).toUpperCase() == String(str2).toUpperCase()))
         {puntaje_de_parecido = puntaje_de_parecido +1;
         }
 
@@ -20,11 +20,11 @@ function seParecen(str1, str2){
 function buscarTitulo(tituloABuscar, jsonFileUrl){
     return fetch(jsonFileUrl).then((response) => response.json()).then((j) => {
         var resultados=[];
-        for (let juego in Object.keys(j)){
-            if (seParecen(String(j[juego].nombre),String(tituloABuscar))>0){
-                resultados.push(j[juego]);
+        for (var kj of Object.keys(j)){       
+            if (parseInt(seParecen(String(j[kj].titulo),String(tituloABuscar)))>parseInt(0)){
+                 resultados.push(j[kj]);
             }
-
+        }
         var aux;
         for (let i=0;i<resultados.length-1;i++){
             for (let j=0;j<resultados.length-1-j;j++){
@@ -36,7 +36,8 @@ function buscarTitulo(tituloABuscar, jsonFileUrl){
             }
         }
 
-        return resultados;
-        }
-    });
-}
+        return resultados;});
+    }
+
+
+//buscarTitulo("hades", "db.json").then((r) => console.log(r)); // <- EJEMPLO DE LLAMADO
