@@ -30,6 +30,8 @@ for (let s of document.querySelectorAll("a.opcion-menu")){
     s.addEventListener("click", function (){
         if (!contenedorEnlaces.classList.contains("contenedor-enlaces--oculto")){
             contenedorEnlaces.classList.add('contenedor-enlaces--visualmenteoculto');
+            menuIconAbrir.classList.remove("icono-menu-oculto");
+            menuIconCerrar.classList.add("icono-menu-oculto");
             contenedorEnlaces.addEventListener('transitionend', 
                 function(e) {contenedorEnlaces.classList.add("contenedor-enlaces--oculto");
                 }, {capture: false, once: true, passive: false
