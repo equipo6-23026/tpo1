@@ -2,7 +2,7 @@
     --review-width:16em;
     --color-texto:#FFFFFF;
     --hover-color:#5599BB;
-    --color-fondo:black;
+    --color-fondo:#242530ff;
 }
 
 html{
@@ -113,19 +113,21 @@ hr{
 }
 
 .link-home{
-    display: inline;
+    display: inline-block;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
     background-color: var(--color-fondo);
     text-decoration: none;
+    width:12em;
+    height:3em;
 }
 
-.logotipo, .isotipo{
+.logotipo{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    height:4em
+    height:3em;
 }
 
 .formulario-busqueda{
@@ -207,29 +209,33 @@ footer{
     .link-home{
         order:1;
         position:relative;
-        display: inline;
+        display: inline-block;
         box-sizing: border-box;
         padding: 0;
         margin: 0 0 0 1em;
-        width:3.5em;
+        width:12em;
+        height:3em;
         background-color: var(--color-fondo);
         text-decoration: none;
     }
 
-    .isotipo{
-        display:none;
-    }
 
-    .formulario-busqueda, .busqueda{
-        order:2;
-        width:85%;
+    .logotipo{
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        height:3em;
     }
+    
     .formulario-busqueda{
-        margin-right:3.5em;
-        box-sizing:border-box;
+        padding: 1em 0
     }
- 
-
+    
+    .busqueda{
+        width:20%;
+        min-width:12em
+    }
+    
     .contenedor-hamburguesa{
         order:3;
         width:16em;
@@ -257,17 +263,18 @@ footer{
     .link-home{
         order:1;
         position:relative;
-        display: inline;
+        display: inline-block;
         box-sizing: border-box;
         padding: 0;
-        margin: 0 0 0 1em;        
-        width:3.5em;
+        margin: 0 0 0 1em;
+        width:12em;
+        height:3em;
         background-color: var(--color-fondo);
         text-decoration: none;
     }
 
     .isotipo{
-        display:none;
+        display:inline-block;
     }
 
     .formulario-busqueda, .busqueda{
@@ -293,6 +300,7 @@ footer{
         padding:0;
         margin-right: 1em;
     }
-     
+
+    
 
 }
