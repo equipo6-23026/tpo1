@@ -105,9 +105,12 @@ hr{
 }
 
 .contenedor-enlaces--oculto{
-    opacity:0;
+    display: none;
 }
 
+.contenedor-enlaces--visualmenteoculto{
+    opacity: 0;
+}
 
 .link-home{
     display: inline;
