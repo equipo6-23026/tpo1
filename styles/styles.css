@@ -153,10 +153,6 @@ footer{
     
 }
 
-.fa-bars{
-    font-size:1.7em;
-}
-
 .bar {
     padding: 0;
     width: 30px;
@@ -177,6 +173,17 @@ footer{
 }
 .bar3 {
     top: 20px;
+}
+
+.icono-menu{
+    font-size:1.7em;
+    position:absolute;
+    right:.5em;
+    transition: opacity 1s;
+}
+
+.icono-menu-oculto{
+    opacity:0;
 }
 
 
