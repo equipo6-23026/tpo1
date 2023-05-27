@@ -101,7 +101,7 @@ hr{
     margin:auto;
     width:var(--review-width);
     min-width: 12em;
-    transition: opacity .7s;
+    transition: opacity .5s;
 }
 
 .contenedor-enlaces--oculto{
@@ -151,6 +151,10 @@ footer{
     margin-left:auto;
     margin-right:0;
     
+}
+
+.fa-bars{
+    font-size:1.7em;
 }
 
 .bar {
