@@ -72,7 +72,7 @@ hr{
 
 .contenedor-hamburguesa{
     display:block;
-    width:var(--review-width);
+    max-width:var(--review-width);
     box-sizing:border-box;
     padding:0;
     margin:auto;
@@ -189,9 +189,11 @@ footer{
 
 #iframe-contenido{
     width:auto;
+    box-sizing:border-box;
+    padding:0;
     height: 30em;
     border-style: none;
-
+    margin:0;
 }
 
 @media (min-width:480px) and (max-width: 760px){
