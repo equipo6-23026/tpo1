@@ -202,7 +202,7 @@ footer{
     margin:0;
 }
 
-/*galaxy S10*/
+
 @media (min-width:480px) and (max-width: 760px){
     header{
         display:flex;
@@ -262,6 +262,16 @@ footer{
         margin-right: 1em;
     }
  
+
+    #iframe-contenido{
+        width:80%;
+        box-sizing:border-box;
+        padding:0;
+        height: 30em;
+        border-style: none;
+        margin:0;
+    }
+
 }
 
 /*ipad*/

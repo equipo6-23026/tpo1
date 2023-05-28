@@ -5,11 +5,14 @@ function novedadesController(movimiento,actual=tituloActual){
         tituloActual=e[0];
         let titulo = document.getElementById('titulo');
         let portada = document.getElementById('portada-highlight');
-/*         console.log(e); */
+        let review = document.getElementById('review');
+
         titulo.innerHTML=`${e[1].titulo}`;
-        
-        /* ACA SE RELLENA NOVEDADES, FALTAN IMAGENES DE JUEGOS PARA EDITAR SRC
-        DE PORTADA */
+        portada.setAttribute("src",`${e[1].portada}`);
+        review.innerHTML=``;
+        for (usuario in e[1].reviews){
+            review.innerHTML=`${review.innerHTML}<br><span class="username">${usuario}</span> : ${e[1].reviews[usuario]}<br>`
+        }
     })
 }
 window.addEventListener('load',novedadesController(movimiento=0))
