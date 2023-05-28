@@ -7,12 +7,23 @@ function seParecen(str1, str2){
     str1 = String(str1).toUpperCase().replace(/[^0-9a-z ]/gi, "").split(" ");
     str2 = String(str2).toUpperCase().replace(/[^0-9a-z ]/gi, "").split(" ");
 
-    for (let palabra in str1){
+    
+    for (let palabra of str1){
+        if (palabra.includes(str2)){
+            console.log('entro',str2)
+            str2.splice(str2.indexOf(palabra),1);
+            puntaje_de_parecido = puntaje_de_parecido +1;
+        }
+    }
+
+    /* 
+        for (let palabra in str1){
         if (str2.includes(palabra)){
             str2.splice(str2.indexOf(palabra),1);
             puntaje_de_parecido = puntaje_de_parecido +1;
         }
     }
+ */
     return puntaje_de_parecido;
 }
 
@@ -55,9 +66,6 @@ function masNuevos(jsonFileUrl, cantidadDeTitulos=3){
         })
     };
 
-
-if (document.getElementById('resultado-busqueda')!==null){
-
     const urlSearchParams = new URLSearchParams(window.location.search);
     const tituloBuscado = urlSearchParams.get("search");
     let contenedor = document.getElementById('resultado-busqueda');
@@ -72,13 +80,13 @@ if (document.getElementById('resultado-busqueda')!==null){
                 let tempR;
                 let aux = document.createElement('a');
                 aux.innerText = `${e.titulo}`;
-                aux.href=`./review.html?titulo=${e.titulo}`;/*  */
+                aux.href=`./review.html?titulo=${e.titulo}&portada=${e.portada}&precio=${e.precio}`;/*  */
                 contenedor.appendChild(aux);
+                contenedor.appendChild(document.createElement('br'));
                 tempR=JSON.stringify(e.reviews);
                 sessionStorage.setItem(e.titulo,tempR);
                 ;
             })
         })
     })
-}
 //buscarTitulo("hades", "db.json").then((r) => console.log(r)); // <- EJEMPLO DE LLAMADO

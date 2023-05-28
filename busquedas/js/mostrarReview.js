@@ -1,17 +1,22 @@
 
 const urlSearchParams = new URLSearchParams(window.location.search);
 const reviewTitulo = urlSearchParams.get("titulo");
+const portada = urlSearchParams.get("portada");
+const precio = urlSearchParams.get("precio");;
 const reviews = sessionStorage.getItem(reviewTitulo);
 
 let contenedor = document.getElementById('contenedor-review');
 window.addEventListener('load',()=>{
-    contenedor.innerHTML=`${reviewTitulo}: `
+    contenedor.innerHTML=`<h2>${reviewTitulo}: </h2>
+    <img class="portada-highlight" src=${portada}>
+    <h3>${precio}</h3>
+    <br>`
     const jsReviews = JSON.parse(reviews);
     for (let user of Object.keys(jsReviews)){
         let parrafo = document.createElement("p");
         parrafo.innerText=`${user}--> ${jsReviews[user]}`
         /* parrafo.className=`` USAR PARA DAR ESTILO */
         contenedor.appendChild(parrafo);
-        /* console.log(jsReviews[user]); */
+
     }
 })
