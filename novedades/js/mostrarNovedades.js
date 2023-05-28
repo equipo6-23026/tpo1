@@ -11,7 +11,7 @@ function novedadesController(movimiento,actual=tituloActual){
         portada.setAttribute("src",`${e[1].portada}`);
         review.innerHTML=``;
         for (usuario in e[1].reviews){
-            review.innerHTML=`${review.innerHTML}<br><span class="username">${usuario}</span> : ${e[1].reviews[usuario]}`
+            review.innerHTML=`${review.innerHTML}<br><span class="username">${usuario}</span> : ${e[1].reviews[usuario]}<br>`
         }
     })
 }
