@@ -45,6 +45,7 @@ function validando(){
                             if (bandera){
                               parrafo.style.color='red';
                               parrafo.innerHTML=warnings;
+                              location.href = '#warning';
                             } else {
                               document.getElementById('contenedor-review').removeChild(form);
                               parrafo.style.height='60vh'

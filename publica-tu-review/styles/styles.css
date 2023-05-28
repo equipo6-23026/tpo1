@@ -20,9 +20,23 @@ main{
     text-align: center
 }
 
+span.aclaracion{
+    display:block;
+    /* font-style:italic; */
+
+}
+
 ul{
     list-style: none;
 }
+
+.logout-link{
+    display:block;
+    text-decoration: none;
+    margin-top:1.5em;
+    color:var(--color-texto);
+}
+
 
 @media (min-width:761px) and (max-width: 1080px){ 
 

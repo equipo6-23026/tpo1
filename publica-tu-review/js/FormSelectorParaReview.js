@@ -27,7 +27,7 @@ let formReview = `
             />
           </div>
           <br>
-          <label for="titulo">Titulo del Videojuego (Minimo 1 letra)</label>
+          <label for="titulo">Titulo del Videojuego<span class="aclaracion">(Minimo 1 letra)</span></label>
           <div class="form-review-item">
             <input id="titulo" type="text" required>
           </div>
@@ -89,7 +89,7 @@ let formReview = `
           </div>
           <br>
           <button type="submit">Enviar</button>
-          <div><a href="" onclick="logout()">Cerrar Sesion</div> 
+          <div class="logout-container"><a class="logout-link" href="" onclick="logout()">Cerrar Sesion</div> 
 `/* FALTA PONERLES CLASES */
 
 let loginError = `
