@@ -70,7 +70,7 @@ body{
     margin:auto;
     display:grid;
     grid-template-columns: repeat(5, 20%);
-    grid-template-rows: 10% 10% 30% 50%;
+    grid-template-rows: 1fr;
 }
 
 .boton-atras{
