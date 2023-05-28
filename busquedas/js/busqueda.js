@@ -39,5 +39,40 @@ function buscarTitulo(tituloABuscar, jsonFileUrl){
         return resultados;});
     }
 
+function masNuevos(jsonFileUrl, cantidadDeTitulos=3){
+        return fetch(jsonFileUrl).then((response) => response.json()).then(j => {
+            let vg= Object.values(j);
+            let temp;
+            for (let i=1; i<vg.length-1; i++){
+                for (let j=0; j<vg.length-i; j++){
+                    if (vg[j].fecha<vg[j+1].fecha){
+                        temp=vg[j+1];
+                        vg[j+1]=vg[j];
+                        vg[j]=temp;
+                    }
+                }
+                }
+            return vg.slice(0,cantidadDeTitulos)
+        })
+    };
 
+
+const urlSearchParams = new URLSearchParams(window.location.search);
+const tituloBuscado = urlSearchParams.get("search");
+let contenedor = document.getElementById('resultado-busqueda');
+
+window.addEventListener('load',()=>{
+    buscarTitulo(tituloBuscado,'../database.json').then(arr => {
+        console.log(arr)
+        let h2 = document.createElement('h2');
+        h2.innerText = `Resultados: `
+        contenedor.appendChild(h2);
+        arr.forEach(e=>{
+            let aux = document.createElement('a');
+            aux.innerText = `${e.titulo}`
+            aux.href=`./review.html?titulo=${e.titulo}`;/*  */
+            contenedor.appendChild(aux);
+        })
+    })
+})
 //buscarTitulo("hades", "db.json").then((r) => console.log(r)); // <- EJEMPLO DE LLAMADO
