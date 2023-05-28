@@ -324,4 +324,13 @@ footer{
         margin-right: 1em;
     }
  
+    #iframe-contenido{
+        width:80%;
+        box-sizing:border-box;
+        padding:0;
+        height: 30em;
+        border-style: none;
+        margin:0;
+    }
+
 }
