@@ -20,11 +20,17 @@ main{
     text-align: center
 }
 
+ul{
+    list-style: none;
+}
 
 @media (min-width:761px) and (max-width: 1080px){ 
+
+    ul.plataforma-checklist li{
+        display:inline-block;
+    }
 
     .steamid-input{
         display:inline-block;
     }
-
 }

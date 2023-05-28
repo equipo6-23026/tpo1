@@ -22,6 +22,7 @@ let formReview = `
               type="text"
               id="basic-url"
               placeholder="12341234"
+              class="steamid-input"
               required
             />
           </div>
@@ -40,47 +41,44 @@ let formReview = `
           <br>
 
           <div class="form-review-item">
-          <p>Plataformas: </p>
-          <div>
-            <input
-              type="checkbox"
-              id="plataform-opt1"
-              value="option1"
-              checked
-            />
-            <label for="plataform-opt1">Steam</label>
+            <p>Plataformas: </p>
+            <ul class="plataforma-checklist">
+              <li>
+                <input
+                type="checkbox"
+                id="plataform-opt1"
+                value="option1"
+                checked
+                />
+                <label for="plataform-opt1">Steam</label>
+              </li>
+              <li>
+                <input
+                type="checkbox"
+                id="plataform-opt2"
+                value="option2"
+                />
+                <label for="plataform-opt2">Playstation</label>
+              </li>
+              <li>
+                <input
+                type="checkbox"
+                id="plataform-opt3"
+                value="option3"
+                />
+                <label for="plataform-opt3">Xbox </label>
+              </li>
+              <li>
+                <input
+                type="checkbox"
+                id="plataform-opt4"
+                value="option4"
+                />
+                <label for="plataform-opt4">Nintendo </label>
+              </li>
+            </ul>
           </div>
-
-          <div>
-            <input
-              type="checkbox"
-              id="plataform-opt2"
-              value="option2"
-            />
-            <label for="plataform-opt2">Playstation</label>
-          </div>
-
-          <div>
-            <input
-              type="checkbox"
-              id="plataform-opt3"
-              value="option3"
-            />
-            <label for="plataform-opt3">Xbox </label>
-          </div>
-
-          <div>
-            <input
-              type="checkbox"
-              id="plataform-opt4"
-              value="option4"
-            />
-            <label for="plataform-opt4"
-              >Nintendo
-            </label>
-          </div>
-          </div>
-            <br>
+          <br>
           <div class="form-review-item">
             <p>Reseña (Minimo: 10 palabras)</p>
             <textarea
