@@ -166,4 +166,43 @@ body{
         border-radius: 0;
     }
 
+    .nombre-seccion{
+        font-size: 2.5em;
+    }
+    .titulo{
+        font-size: 2.1em;
+    }
+
+    .boton-atras{
+        grid-column-start: 2;
+        grid-column-end:3;
+    }
+    
+    .titulo{
+        display:inline-block;    
+        grid-column-start: 2;
+        grid-column-end:5;
+        grid-row-start:2;
+        grid-row-end:3;
+    }
+    
+    .boton-adelante{ 
+        grid-column-start: 4;
+        grid-column-end: 5;
+    }
+    
+    .boton-atras, .boton-adelante{
+        grid-row-start:2;
+        grid-row-end:3;
+        display:inline-block;
+        margin:auto;
+        background-color:var(--color-fondo);
+        color:var(--color-texto);    
+        border-style: none;
+        font-size: 2.5em;
+        width: 1.4em;
+        height: 1.4em;
+    }
+    
+
 }
