@@ -40,4 +40,32 @@ function buscarTitulo(tituloABuscar, jsonFileUrl){
     }
 
 
+function masNuevos(jsonFileUrl, cantidadDeTitulos=3){
+        return fetch(jsonFileUrl).then((response) => response.json()).then(j => {
+            let vg= Object.values(j);
+            let temp;
+            for (let i=1; i<vg.length-1; i++){
+                for (let j=0; j<vg.length-i; j++){
+                    if (vg[j].fecha<vg[j+1].fecha){
+                        temp=vg[j+1];
+                        vg[j+1]=vg[j];
+                        vg[j]=temp;
+                    }
+                }
+                }
+            return vg.slice(0,cantidadDeTitulos)
+        })
+    };
+
+function insertarTitulo(titulosNuevos,tituloActual,anteriorSiguiente){
+    let nAMostrar = tituloActual+anteriorSiguiente;
+    if (nAMostrar == titulosNuevos.length){
+        nAMostrar = 0;
+    } else if (nAMostrar == -1){
+        nAMostrar = titulosNuevos.length-1;
+    }
+    return [nAMostrar,titulosNuevos[nAMostrar]]; //devuelve el indice y el titulo a mostrar 
+}
+
+//ultimosTitulos("database.json").then(r => console.log(r)); // <-EJEMPLO, cant opcional
 //buscarTitulo("hades", "db.json").then((r) => console.log(r)); // <- EJEMPLO DE LLAMADO
