@@ -18,14 +18,6 @@ body{
 }
 
 
-.boton-atras, .boton-adelante{
-    background-color: var(--color-fondo);
-    color: var(--color-texto);
-    border: #000000;
-    height:4em;
-    width:4em;
-
-}
 /* 
 .boton-atras:hover, .boton-adelante:hover{
     background-color:var(--hover-color);
@@ -57,27 +49,70 @@ body{
 }
 
 
-#destacados{
-    display:grid;
-    grid-template-areas: "nombre-seccion nombre-seccion nombre-seccion"
-                         "atras titulo adelante"
-                         "portada portada portada"
-                         "review review review"
+.nombre-seccion{
+    text-align: center;
 }
 
-.nombre-seccion{grid-area:nombre-seccion}
-.boton-atras{grid-area:atras;}
-.titulo{grid-area:titulo}
-.boton-adelante{grid-area:adelante}
-.portada{grid-area:portada}
-.review{grid-area:review} */
+.contenedor-botones-y-titulo{
+    margin:auto;
+    display:grid;
+    grid-template-columns: repeat(5, 20%);
+    grid-template-rows: 10% 10% 30% 50%;
+}
+
+
+
+.boton-atras{
+    display:inline-block;
+    grid-column-start: 1;
+    grid-column-end:2;
+    grid-row-start:2;
+    grid-row-end:3;
+}
+
+.titulo{
+    display:inline-block;    
+    grid-column-start: 2;
+    grid-column-end:5;
+    grid-row-start:2;
+    grid-row-end:3;
+}
+
+.boton-adelante{
+    display:inline-block;    
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start:2;
+    grid-row-end:3;
+}
+
+.portada{
+    grid-column-start:1;
+    grid-column-end:6;
+    grid-row-start:3;
+    grid-row-end:4;
+}
+
+.review{    
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
 
 .boton-atras, .boton-adelante{
-    background-color:black;
+    margin:auto;
+    background-color:var(--color-fondo);
+    color:var(--color-texto);    
     border-style: none;
-    color:var(--color-texto);
     font-size: 3em;
-    width: 1.8em;
+    width: 1.4em;
+    height: 1.4em;
+}
+
+
+.titulo{
+    font-size: 1.4em;
 }
 
 .review{
@@ -87,4 +122,24 @@ body{
 .username{
     font-weight:600;
     font-style: italic;
+}
+
+@media (min-width:480px) and (max-width: 760px){
+
+    /* .titulo{
+        text-align: center;
+    } */
+    .boton-atras{
+        display:inline-block;
+    }
+
+    .boton-adelante{
+        display: inline-block;
+
+
+    }
+
+    .portada-highlight{
+        width:calc(var(--review-width)*1.2);
+    }
 }
