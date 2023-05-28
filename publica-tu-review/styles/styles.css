@@ -2,7 +2,7 @@
     --review-width:16em;
     --color-texto:#FFFFFF;
     --hover-color:#5599BB;
-    --color-fondo:black;
+    --color-fondo:#242530ff;
 }
 
 html{
@@ -13,9 +13,38 @@ body{
     background-color: var(--color-fondo);
     color: var(--color-texto);
     font-family: 'VT323', 'Roboto', sans-serif;
-    font-size:1em
+    font-size:1.3em
 }
 
 main{
     text-align: center
+}
+
+span.aclaracion{
+    display:block;
+    /* font-style:italic; */
+
+}
+
+ul{
+    list-style: none;
+}
+
+.logout-link{
+    display:block;
+    text-decoration: none;
+    margin-top:1.5em;
+    color:var(--color-texto);
+}
+
+
+@media (min-width:761px) and (max-width: 1080px){ 
+
+    ul.plataforma-checklist li{
+        display:inline-block;
+    }
+
+    .steamid-input{
+        display:inline-block;
+    }
 }
