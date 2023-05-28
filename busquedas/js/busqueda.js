@@ -22,7 +22,7 @@ function buscarTitulo(tituloABuscar, jsonFileUrl){
         var resultados=[];
         for (var kj of Object.keys(j)){       
             if (parseInt(seParecen(String(j[kj].titulo),String(tituloABuscar)))>parseInt(0)){
-                 resultados.push(j[kj]);
+                resultados.push(j[kj]);
             }
         }
         var aux;
@@ -35,7 +35,6 @@ function buscarTitulo(tituloABuscar, jsonFileUrl){
                 }
             }
         }
-
         return resultados;});
     }
 
@@ -57,22 +56,29 @@ function masNuevos(jsonFileUrl, cantidadDeTitulos=3){
     };
 
 
-const urlSearchParams = new URLSearchParams(window.location.search);
-const tituloBuscado = urlSearchParams.get("search");
-let contenedor = document.getElementById('resultado-busqueda');
+if (document.getElementById('resultado-busqueda')!==null){
 
-window.addEventListener('load',()=>{
-    buscarTitulo(tituloBuscado,'../database.json').then(arr => {
-        console.log(arr)
-        let h2 = document.createElement('h2');
-        h2.innerText = `Resultados: `
-        contenedor.appendChild(h2);
-        arr.forEach(e=>{
-            let aux = document.createElement('a');
-            aux.innerText = `${e.titulo}`
-            aux.href=`./review.html?titulo=${e.titulo}`;/*  */
-            contenedor.appendChild(aux);
+    const urlSearchParams = new URLSearchParams(window.location.search);
+    const tituloBuscado = urlSearchParams.get("search");
+    let contenedor = document.getElementById('resultado-busqueda');
+
+    window.addEventListener('load',()=>{
+        buscarTitulo(tituloBuscado,'../database.json').then(arr => {
+            arr = Object.values(arr);
+            let h2 = document.createElement('h2');
+            h2.innerText = `Resultados: `
+            contenedor.appendChild(h2);
+            arr.forEach(e=>{
+                let tempR;
+                let aux = document.createElement('a');
+                aux.innerText = `${e.titulo}`;
+                aux.href=`./review.html?titulo=${e.titulo}`;/*  */
+                contenedor.appendChild(aux);
+                tempR=JSON.stringify(e.reviews);
+                sessionStorage.setItem(e.titulo,tempR);
+                ;
+            })
         })
     })
-})
+}
 //buscarTitulo("hades", "db.json").then((r) => console.log(r)); // <- EJEMPLO DE LLAMADO
