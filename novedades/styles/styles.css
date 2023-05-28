@@ -48,7 +48,7 @@ body{
 }
 
 .portada-highlight{
-    width:var(--review-width)
+    width:var(--review-width);
 }
 
 .review{
@@ -78,4 +78,13 @@ body{
     color:var(--color-texto);
     font-size: 3em;
     width: 1.8em;
+}
+
+.review{
+    text-align: left;
+}
+
+.username{
+    font-weight:600;
+    font-style: italic;
 }
