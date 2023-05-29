@@ -41,6 +41,7 @@ hr{
 .encabezado-noticia{
     font-size: 2.2em;
     margin-left:1%;
+    margin-right:2%;
 }
 
 .copete-noticia{
@@ -50,20 +51,22 @@ hr{
 
 }
 
-.cuerpo-noticia{
-    display: flex;
-    flex-direction: row;
-    margin-left:3%;
-
-}
-
 .imagen-noticia{
     display:block;
-    width:30%;
-    margin-right:2em;
+    width:80%;
 }
 
 .texto-noticia{ font-size: 1.5em;
-    width:50%;
+    width:80%;
+    margin-right:5%;
 
+}
+
+@media (min-width:761px) { 
+    .cuerpo-noticia{
+        display: flex;
+        flex-direction: row;
+        margin-left:3%;
+    
+    }
 }
