@@ -1,6 +1,7 @@
 :root{
     --review-width:16em;
     --color-texto:#FFFFFF;
+    --color-texto-alternativo:#00ff33ff;
     --hover-color:#5599BB;
     --color-fondo:#242530ff;
 }
@@ -108,7 +109,7 @@ body{
 }
 
 .username{
-    font-weight:600;
+    color:var(--color-texto-alternativo);
     font-style: italic;
 }
 
