@@ -16,22 +16,8 @@ function seParecen(str1, str2){
                 puntaje_de_parecido = puntaje_de_parecido + 1;
             }
         }
-        
-        // if (palabra.includes(str2)){
-        //     console.log('incluye.',str2)
-        //     str2.splice(str2.indexOf(palabra),1);
-        //     puntaje_de_parecido = puntaje_de_parecido +1;
-        // }
     }
 
-    /* 
-        for (let palabra in str1){
-        if (str2.includes(palabra)){
-            str2.splice(str2.indexOf(palabra),1);
-            puntaje_de_parecido = puntaje_de_parecido +1;
-        }
-    }
- */
     return puntaje_de_parecido;
 }
 
@@ -49,7 +35,6 @@ function buscarTitulo(tituloABuscar, jsonFileUrl){
         var aux;
         for (let i=0;i<resultados.length-1;i++){
             for (let j=0;j<resultados.length-1-j;j++){
-                // console.log(seParecen(resultados[i],tituloABuscar) > seParecen(resultados[i+1],tituloABuscar));
                 if (seParecen(resultados[i],tituloABuscar) > seParecen(resultados[i+1],tituloABuscar)){
                     aux=resultados[i+1];
                     resultados[i+1]=resultados[i];
