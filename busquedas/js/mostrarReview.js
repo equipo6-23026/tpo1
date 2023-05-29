@@ -15,7 +15,7 @@ window.addEventListener('load',()=>{
         <img class="portada-highlight" src=${portada}>
         <h3>Precio en dolares: $${precio}</h3>
         <h3>Precio en pesos argentinos: $${dolarizado} (mas impuestos)</h3>
-        <h3>Reviews:</h3>
+        <h3 class="reviews-titulo">Reviews</h3>
         `
         let cajaReviews = document.createElement("div");
         cajaReviews.className='caja-reviews';

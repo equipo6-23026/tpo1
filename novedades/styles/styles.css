@@ -39,7 +39,7 @@ body{
 
 
 .caja-reviews{
-    height:15.4em;
+    height:16.4em;
     width: var(--review-width);
     margin:auto;
     padding: auto 2em auto 2em;
@@ -121,6 +121,12 @@ body{
     .caja-reviews{
         height:10.6em;
     }
+
+    .caja-reviews{
+        height:13.8em;
+        width: calc(var(--review-width)*1.8);
+    }
+    
 }
 
 @media (min-width:761px) and (max-width: 1080px){
@@ -129,8 +135,8 @@ body{
     }
 
     .caja-reviews{
-        width:calc(var(--review-width)*1.5);
-        height: 10.6em;
+        width:calc(var(--review-width)*1.8);
+        height: 13.8m;
     }
 }
 
