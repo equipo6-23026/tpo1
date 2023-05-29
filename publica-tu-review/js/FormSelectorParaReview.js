@@ -33,10 +33,10 @@ let formReview = `
           </div>
           <br>
           <label for="inputGroupFile02">
-            Añadi tus capturas de pantalla
+            Añadi tu captura de pantalla
           </label>
           <div class="form-review-item">
-            <input type="file" id="inputGroupFile02" />
+            <input type="url" id="image-url" placeholder="https://imageurl.com/example.jpg" required/>
           </div>
           <br>
 
@@ -94,15 +94,16 @@ let formReview = `
 
 let loginError = `
 <div class="form-login-item">
-    <label for="usuario">Usuario:</label>
-    <input type="text" name="usuario" id="usuario" required>
+  <label for="usuario">Usuario:</label>
+  <input type="text" name="usuario" id="usuario" required>
 </div>
 
 <div class="form-login-item">
     <label for="contrasena">Contraseña:</label>
     <input type="password" name="contrasena" id="contrasena" required>
+    
 </div>
-<button type=submit()>Enviar</button>
+<button class="btn-login" type=submit()>Enviar</button>
 `
 let log = false;
 let bool = false;

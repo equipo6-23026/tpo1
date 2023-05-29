@@ -7,7 +7,8 @@ function login(){
         let usuario = document.getElementById("usuario").value;
         let contrasena = document.getElementById("contrasena").value;
         if ((usuario === 'vairo') && (contrasena === '1234') || 
-        (usuario === 'cris') && (contrasena === '1234')){
+        (usuario === 'cris') && (contrasena === '1234')
+        (usuario === 'paola') && (contrasena === '1234')){
             sessionStorage.setItem('logueado',true);
             sessionStorage.setItem('userName',usuario);
             window.location.reload();

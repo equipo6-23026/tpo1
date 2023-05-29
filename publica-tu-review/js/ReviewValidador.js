@@ -13,11 +13,13 @@ const myReTitulo = new RegExp(/^(?=.*[a-zA-Z])[a-zA-Z0-9\s\-!&'():]+$/)
 caracteres especiales y numeros tambien */
 const myReUrl = new RegExp(/\d{8}$/);
 /* Solo acepta secuencia de 8 numeros. */
+const myReImgUrl = new RegExp(/^(https?:\/\/[\w-]+(\.[\w-]+)+(:\d+)?(\/\S*)?)\.(jpeg|jpg|png|gif|bmp|svg)$/i);
 function validando(){
   const form = document.getElementById('formReview');
   form.addEventListener("submit", e=>{
                             const nombre = document.getElementById('username');
                             const url = document.getElementById('basic-url');
+                            const imageUrl = document.getElementById('image-url');
                             const titulo = document.getElementById('titulo');
                             const resena = document.getElementById('resena');
                             const parrafo  = document.getElementById('warning');
@@ -35,6 +37,10 @@ function validando(){
                             } 
                             if(!myReUrl.test(url.value)){
                               warnings += `La URL no es valida <br>`;
+                              bandera = true;
+                            }
+                            if(!myReImgUrl.test(imageUrl.value)){
+                              warnings += `La URL de la imagen no es valida <br>`;
                               bandera = true;
                             }
                             if( removerEspacios(resena.value) < 10){ /* Valida que haya mas de 10 palabras */
