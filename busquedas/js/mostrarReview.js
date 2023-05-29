@@ -11,17 +11,25 @@ let contenedor = document.getElementById('contenedor-review');
 window.addEventListener('load',()=>{
     const dolarizado = consultaDolar().then((c)=>{
         let dolarizado = precio*parseFloat(c);
-        contenedor.innerHTML=`<h2>${reviewTitulo}: </h2>
+        contenedor.innerHTML=`
+        <div class="contenedor-grid" id="contenedor-grid">
+        <h2 class="review-titulo">${reviewTitulo} </h2>
         <img class="portada-highlight" src=${portada}>
-        <h3>Precio en dolares: $${precio}</h3>
-        <h3>Precio en pesos argentinos: $${dolarizado} (mas impuestos)</h3>
-        <br>`
+        <div class="precio-dolares">Precio en dolares: $${precio}</div>
+        <div class="precio-pesosar">Precio en pesos argentinos: $${dolarizado} (mas impuestos)</div>
+        <div class="reviews-titulo">Reviews</div>
+        </div>
+        `
+        let contenedorGrid = document.getElementById('contenedor-grid');
+        let cajaReviews = document.createElement("div");
+        cajaReviews.className='caja-reviews';
         const jsReviews = JSON.parse(reviews);
         for (let user of Object.keys(jsReviews)){
             let parrafo = document.createElement("p");
             parrafo.innerText=`${user}--> ${jsReviews[user]}`
-            /* parrafo.className=`` USAR PARA DAR ESTILO */
-            contenedor.appendChild(parrafo);
+            parrafo.className=`review`
+            cajaReviews.appendChild(parrafo);
             }
+        contenedorGrid.appendChild(cajaReviews);
         });
 });

@@ -7,31 +7,24 @@ function seParecen(str1, str2){
     str1 = String(str1).toUpperCase().replace(/[^0-9a-z ]/gi, "").split(" ");
     str2 = String(str2).toUpperCase().replace(/[^0-9a-z ]/gi, "").split(" ");
 
-    
-    for (let palabra of str1){
-        if (palabra.includes(str2)){
-            console.log('entro',str2)
-            str2.splice(str2.indexOf(palabra),1);
-            puntaje_de_parecido = puntaje_de_parecido +1;
+    for (let palabrabd of str1){
+        for (let palabrabusqueda of str2){
+            if (palabrabd.includes(palabrabusqueda)){
+                str2.splice(str2.indexOf(palabrabd),1);    
+                puntaje_de_parecido = puntaje_de_parecido + 1;
+            }
         }
     }
 
-    /* 
-        for (let palabra in str1){
-        if (str2.includes(palabra)){
-            str2.splice(str2.indexOf(palabra),1);
-            puntaje_de_parecido = puntaje_de_parecido +1;
-        }
-    }
- */
     return puntaje_de_parecido;
 }
 
 
 function buscarTitulo(tituloABuscar, jsonFileUrl){
+    
     return fetch(jsonFileUrl).then((response) => response.json()).then((j) => {
         var resultados=[];
-        for (var kj of Object.keys(j)){       
+        for (var kj of Object.keys(j)){  
             if (parseInt(seParecen(String(j[kj].titulo),String(tituloABuscar)))>parseInt(0)){
                 resultados.push(j[kj]);
             }
@@ -70,17 +63,20 @@ function masNuevos(jsonFileUrl, cantidadDeTitulos=3){
     const tituloBuscado = urlSearchParams.get("search");
     let contenedor = document.getElementById('resultado-busqueda');
 
+
     window.addEventListener('load',()=>{
         buscarTitulo(tituloBuscado,'../database.json').then(arr => {
             arr = Object.values(arr);
             let h2 = document.createElement('h2');
-            h2.innerText = `Resultados: `
+            h2.innerText = `Resultados`;
+            h2.className = `titulo-resultados`;
             contenedor.appendChild(h2);
             arr.forEach(e=>{
                 let tempR;
                 let aux = document.createElement('a');
                 aux.innerText = `${e.titulo}`;
-                aux.href=`./review.html?titulo=${e.titulo}&portada=${e.portada}&precio=${e.precio}`;/*  */
+                aux.href=`./review.html?titulo=${e.titulo}&portada=${e.portada}&precio=${e.precio}`;
+                aux.className='link-resultado';
                 contenedor.appendChild(aux);
                 contenedor.appendChild(document.createElement('br'));
                 tempR=JSON.stringify(e.reviews);
@@ -89,4 +85,8 @@ function masNuevos(jsonFileUrl, cantidadDeTitulos=3){
             })
         })
     })
+
+
+
+
 //buscarTitulo("hades", "db.json").then((r) => console.log(r)); // <- EJEMPLO DE LLAMADO

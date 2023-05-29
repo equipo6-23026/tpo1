@@ -191,7 +191,7 @@ footer{
     width:auto;
     box-sizing:border-box;
     padding:0;
-    height: 31em;
+    height: 42em;
     border-style: none;
     margin:0;
     overflow-x: hidden;
@@ -262,7 +262,7 @@ footer{
         width:80%;
         box-sizing:border-box;
         padding:0;
-        height: 32em;
+        height: 45em;
         border-style: none;
         margin:0;
     }
@@ -333,7 +333,7 @@ footer{
         width:100%;
         box-sizing:border-box;
         padding:0;
-        height: 35em;
+        height: 43em;
         border-style: none;
         margin:0;
     }
