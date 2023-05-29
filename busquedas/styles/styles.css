@@ -37,14 +37,17 @@ h2{
     height:10.6em;
     width: var(--review-width);
     margin:auto;
-    padding: auto 2em auto 2em;
+    padding: auto 2em auto 3em;
     overflow-y:scroll;
     border-style:groove;
-    border-radius: 5%;
+    border-radius: 0%;
     margin-top:1em;
+
+
 }
 
 .username{
+    font-size:1.4em;
     color:var(--color-texto-alternativo);
     font-style: italic;
 }
@@ -112,7 +115,7 @@ h2{
         padding: auto 2em auto 2em;
         overflow-y:scroll;
         border-style:groove;
-        border-radius: 5%;
+        border-radius: 0%;
         margin-top:1em;
     }
     
@@ -148,7 +151,7 @@ h2{
         padding: auto 2em auto 2em;
         overflow-y:scroll;
         border-style:groove;
-        border-radius: 5%;
+        border-radius: 0%;
         margin-top:1em;
     }
     

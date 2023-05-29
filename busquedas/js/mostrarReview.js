@@ -26,8 +26,15 @@ window.addEventListener('load',()=>{
         const jsReviews = JSON.parse(reviews);
         for (let user of Object.keys(jsReviews)){
             let parrafo = document.createElement("p");
-            parrafo.innerText=`${user}--> ${jsReviews[user]}`
-            parrafo.className=`review`
+            parrafo.className=`parrafo-review`;
+            let username = document.createElement("span");
+            username.className="username";
+            username.innerText=`${user} :`;          
+            let review = document.createElement("review");
+            review.className="review";
+            review.innerText=`${jsReviews[user]}`;
+            parrafo.appendChild(username);
+            parrafo.appendChild(review);
             cajaReviews.appendChild(parrafo);
             }
         contenedorGrid.appendChild(cajaReviews);
