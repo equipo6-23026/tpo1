@@ -74,7 +74,9 @@ h2{
     margin: 1em 0 0 0;
 }
 
-
+.precio-dolares, .precio-pesosar{
+    font-size: 1.2em;
+}
 
 
 
@@ -117,10 +119,6 @@ h2{
 
 @media (min-width:761px) and (max-width: 1080px){ 
 
-    h3{
-        margin-left:8.8em;
-    }
-
     .titulo-resultados{
         font-size: 2em;
     }
@@ -147,6 +145,10 @@ h2{
         margin-top:1em;
     }
     
+    .precio-dolares, .precio-pesosar{
+        text-align:center;
+    }
+
     .review{
         margin: 1em 1em auto 1em;
         font-size: 1.2em;
@@ -194,5 +196,62 @@ h2{
         border-radius: 0;
     }
 
+    .contenedor-grid{
+        display:grid;
+        grid-template-columns: repeat(5, 20%);
+        grid-template-rows: 5em 3em 3em 3em 20em;
+    }
 
+    .review-titulo{
+        grid-column-start: 3;
+        grid-column-end: 4;
+    }
+
+    .portada-highlight{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 6;
+        position: relative;
+        display:inline-block;        
+        height:auto;
+        width:95%;
+        margin:auto 1em auto 1em;
+    }
+
+    .precio-dolares{
+        margin-left: 1em;
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    .precio-pesosar{
+        margin-left: 1em;        
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+
+    .reviews-titulo{
+        margin: 1em 1em;
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 4;
+        grid-row-end: 5;
+    }
+
+    .caja-reviews{
+        display:block;
+        margin: 0 1em 0 1em;
+        height:95%;
+        width:95%;
+        grid-column-start: 3;
+        grid-column-end: 6;
+        grid-row-start: 5;
+        grid-row-end: 6;
+
+    }
 }
