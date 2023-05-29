@@ -1,6 +1,7 @@
 :root{
     --review-width:16em;
     --color-texto:#FFFFFF;
+    --color-texto-alternativo:#00ff33ff;    
     --hover-color:#5599BB;
     --color-fondo:#242530ff;
 }
@@ -42,6 +43,12 @@ h2{
     border-radius: 5%;
     margin-top:1em;
 }
+
+.username{
+    color:var(--color-texto-alternativo);
+    font-style: italic;
+}
+
 
 .review{
     margin: 1em 1em auto 1em;
