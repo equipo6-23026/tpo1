@@ -1,5 +1,5 @@
 
-function consultaDolar(){
+async function consultaDolar(){
     function consultaDolarSi(){
         const API_URL='https://dolarsi.com/api/api.php?type=valoresprincipales';
             return fetch(`${API_URL}`).then((response) => response.json());
@@ -18,6 +18,6 @@ function consultaDolar(){
 
 }
 
- //llamado de ejemplo (devuelve una promise):
-//consultaDolar().then((c) => console.log(c));
+ /* llamado de ejemplo (devuelve una promise):
+ */consultaDolar().then((c) => console.log(c));
 
