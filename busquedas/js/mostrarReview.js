@@ -17,12 +17,15 @@ window.addEventListener('load',()=>{
         <h3>Precio en pesos argentinos: $${dolarizado} (mas impuestos)</h3>
         <h3>Reviews:</h3>
         `
+        let cajaReviews = document.createElement("div");
+        cajaReviews.className='caja-reviews';
         const jsReviews = JSON.parse(reviews);
         for (let user of Object.keys(jsReviews)){
             let parrafo = document.createElement("p");
             parrafo.innerText=`${user}--> ${jsReviews[user]}`
-            /* parrafo.className=`` USAR PARA DAR ESTILO */
-            contenedor.appendChild(parrafo);
+            parrafo.className=`review`
+            cajaReviews.appendChild(parrafo);
             }
+        contenedor.appendChild(cajaReviews);
         });
 });
