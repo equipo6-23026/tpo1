@@ -5,13 +5,17 @@ function novedadesController(movimiento,actual=tituloActual){
         tituloActual=e[0];
         let titulo = document.getElementById('titulo');
         let portada = document.getElementById('portada-highlight');
-        let review = document.getElementById('review');
-
+        let cajaReviews = document.getElementById('caja-reviews');
+        portada.setAttribute("src",``);
         titulo.innerHTML=`${e[1].titulo}`;
+        portada.setAttribute("alt",`Captura de pantalla de ${e[1].titulo}`);
         portada.setAttribute("src",`${e[1].portada}`);
-        review.innerHTML=``;
+        cajaReviews.innerHTML=``
         for (usuario in e[1].reviews){
-            review.innerHTML=`${review.innerHTML}<br><span class="username">${usuario}</span> : ${e[1].reviews[usuario]}<br>`
+            cajaReviews.innerHTML=`${cajaReviews.innerHTML}
+            <p class="review">
+                <br><span class="username">${usuario}</span> : ${e[1].reviews[usuario]}
+            </p>`;
         }
     })
 }
