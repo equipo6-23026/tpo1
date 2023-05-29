@@ -7,13 +7,21 @@ function seParecen(str1, str2){
     str1 = String(str1).toUpperCase().replace(/[^0-9a-z ]/gi, "").split(" ");
     str2 = String(str2).toUpperCase().replace(/[^0-9a-z ]/gi, "").split(" ");
 
-    
-    for (let palabra of str1){
-        if (palabra.includes(str2)){
-            console.log('entro',str2)
-            str2.splice(str2.indexOf(palabra),1);
-            puntaje_de_parecido = puntaje_de_parecido +1;
+    for (let palabrabd of str1){
+        for (let palabrabusqueda of str2){
+            console.log(` * ${palabrabd} incluye ${palabrabusqueda} ? * `);
+            if (palabrabd.includes(palabrabusqueda)){
+                console.log(palabrabd.includes(palabrabusqueda));
+                str2.splice(str2.indexOf(palabrabd),1);    
+                puntaje_de_parecido = puntaje_de_parecido + 1;
+            }
         }
+        
+        // if (palabra.includes(str2)){
+        //     console.log('incluye.',str2)
+        //     str2.splice(str2.indexOf(palabra),1);
+        //     puntaje_de_parecido = puntaje_de_parecido +1;
+        // }
     }
 
     /* 
@@ -29,9 +37,11 @@ function seParecen(str1, str2){
 
 
 function buscarTitulo(tituloABuscar, jsonFileUrl){
+    
     return fetch(jsonFileUrl).then((response) => response.json()).then((j) => {
         var resultados=[];
-        for (var kj of Object.keys(j)){       
+        for (var kj of Object.keys(j)){  
+            console.log(`${j[kj].titulo} ? ${parseInt(seParecen(String(j[kj].titulo),String(tituloABuscar)))}`);     
             if (parseInt(seParecen(String(j[kj].titulo),String(tituloABuscar)))>parseInt(0)){
                 resultados.push(j[kj]);
             }
@@ -39,6 +49,7 @@ function buscarTitulo(tituloABuscar, jsonFileUrl){
         var aux;
         for (let i=0;i<resultados.length-1;i++){
             for (let j=0;j<resultados.length-1-j;j++){
+                // console.log(seParecen(resultados[i],tituloABuscar) > seParecen(resultados[i+1],tituloABuscar));
                 if (seParecen(resultados[i],tituloABuscar) > seParecen(resultados[i+1],tituloABuscar)){
                     aux=resultados[i+1];
                     resultados[i+1]=resultados[i];
@@ -74,7 +85,8 @@ function masNuevos(jsonFileUrl, cantidadDeTitulos=3){
         buscarTitulo(tituloBuscado,'../database.json').then(arr => {
             arr = Object.values(arr);
             let h2 = document.createElement('h2');
-            h2.innerText = `Resultados: `
+            h2.innerText = `Resultados: `;
+            h2.className = `titulo-resultados`;
             contenedor.appendChild(h2);
             arr.forEach(e=>{
                 let tempR;
