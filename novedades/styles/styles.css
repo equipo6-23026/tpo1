@@ -39,7 +39,7 @@ body{
 
 
 .caja-reviews{
-    height:10.6em;
+    height:15.4em;
     width: var(--review-width);
     margin:auto;
     padding: auto 2em auto 2em;
@@ -52,6 +52,7 @@ body{
 
 .review{
     margin: auto 1em auto 1em;
+    font-size: 1.2em;
 }
 
 
