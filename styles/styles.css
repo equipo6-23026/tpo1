@@ -34,12 +34,6 @@ li a{
     color: var(--color-texto)
 }
 
-/* li a:hover{
-    background-color:var(--hover-color);
-    transition: 0.5s;
-} */
-
-
 ul{
     list-style-type: none;
     padding-left:0
@@ -356,7 +350,11 @@ footer{
     hr{
         margin-top:3.5em;
     }
-    
+
+    li a:hover{
+        background-color:var(--hover-color);
+        transition: 0.5s;
+    }
 
     .link-home{
         order:1;
@@ -415,6 +413,17 @@ footer{
         margin-right: 1em;
     }
  
+    .redes{
+        margin:auto;
+        display:flex;
+        flex-direction: row;
+        justify-content:space-between;
+        width:6em;
+    }
+    .fa-brands{
+        font-size:1.3em;
+    }
+
     #iframe-contenido{
         width:100%;
         box-sizing:border-box;
