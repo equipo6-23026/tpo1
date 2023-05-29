@@ -29,7 +29,19 @@ span.aclaracion{
 ul{
     list-style: none;
 }
-
+.form-login-item{
+    margin: 0 auto;
+    width: 8em;
+    padding: 1em;
+}
+.form-review-item input{
+    display: block;
+    width: var(--review-width);
+    margin: 0 auto;
+}
+.btn-login{
+    margin: 1em;
+}
 .logout-link{
     display:block;
     text-decoration: none;
