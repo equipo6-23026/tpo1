@@ -9,9 +9,7 @@ function seParecen(str1, str2){
 
     for (let palabrabd of str1){
         for (let palabrabusqueda of str2){
-            console.log(` * ${palabrabd} incluye ${palabrabusqueda} ? * `);
             if (palabrabd.includes(palabrabusqueda)){
-                console.log(palabrabd.includes(palabrabusqueda));
                 str2.splice(str2.indexOf(palabrabd),1);    
                 puntaje_de_parecido = puntaje_de_parecido + 1;
             }
@@ -27,7 +25,6 @@ function buscarTitulo(tituloABuscar, jsonFileUrl){
     return fetch(jsonFileUrl).then((response) => response.json()).then((j) => {
         var resultados=[];
         for (var kj of Object.keys(j)){  
-            console.log(`${j[kj].titulo} ? ${parseInt(seParecen(String(j[kj].titulo),String(tituloABuscar)))}`);     
             if (parseInt(seParecen(String(j[kj].titulo),String(tituloABuscar)))>parseInt(0)){
                 resultados.push(j[kj]);
             }
@@ -66,6 +63,7 @@ function masNuevos(jsonFileUrl, cantidadDeTitulos=3){
     const tituloBuscado = urlSearchParams.get("search");
     let contenedor = document.getElementById('resultado-busqueda');
 
+
     window.addEventListener('load',()=>{
         buscarTitulo(tituloBuscado,'../database.json').then(arr => {
             arr = Object.values(arr);
@@ -77,7 +75,8 @@ function masNuevos(jsonFileUrl, cantidadDeTitulos=3){
                 let tempR;
                 let aux = document.createElement('a');
                 aux.innerText = `${e.titulo}`;
-                aux.href=`./review.html?titulo=${e.titulo}&portada=${e.portada}&precio=${e.precio}`;/*  */
+                aux.href=`./review.html?titulo=${e.titulo}&portada=${e.portada}&precio=${e.precio}`;
+                aux.className='link-resultado';
                 contenedor.appendChild(aux);
                 contenedor.appendChild(document.createElement('br'));
                 tempR=JSON.stringify(e.reviews);
@@ -86,4 +85,8 @@ function masNuevos(jsonFileUrl, cantidadDeTitulos=3){
             })
         })
     })
+
+
+
+
 //buscarTitulo("hades", "db.json").then((r) => console.log(r)); // <- EJEMPLO DE LLAMADO

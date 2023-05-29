@@ -19,5 +19,5 @@ async function consultaDolar(){
 }
 
  /* llamado de ejemplo (devuelve una promise):
- */consultaDolar().then((c) => console.log(c));
+ consultaDolar().then((c) => console.log(c));*/
 
