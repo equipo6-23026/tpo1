@@ -68,7 +68,7 @@ function masNuevos(jsonFileUrl, cantidadDeTitulos=3){
         buscarTitulo(tituloBuscado,'../database.json').then(arr => {
             arr = Object.values(arr);
             let h2 = document.createElement('h2');
-            h2.innerText = `Resultados: `;
+            h2.innerText = `Resultados`;
             h2.className = `titulo-resultados`;
             contenedor.appendChild(h2);
             arr.forEach(e=>{

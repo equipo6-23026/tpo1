@@ -16,6 +16,21 @@ body{
     font-size:1em
 }
 
+h2{
+    text-align: center;
+}
+
+.caja-reviews{
+    height:10.6em;
+    width: var(--review-width);
+    margin:auto;
+    padding: auto 2em auto 2em;
+    overflow-y:scroll;
+    border-style:groove;
+    border-radius: 5%;
+    margin-top:1em;
+}
+
 .lista-resultados{
     list-style-type: none;
     padding:0;
@@ -40,6 +55,13 @@ body{
 #resultado-busqueda{
     margin: 1em 0 0 0;
 }
+
+.portada-highlight{
+    width:calc(var(--review-width)*1.2);
+}
+
+
+
 
 @media (min-width:480px) and (max-width: 760px){
     .titulo-resultados{
