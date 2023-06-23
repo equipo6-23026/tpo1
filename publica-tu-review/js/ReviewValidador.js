@@ -40,7 +40,7 @@ function validando(){
                               bandera = true;
                             }
                             if(!myReImgUrl.test(imageUrl.value)){
-                              warnings += `La URL de la imagen no es valida, asegurate de colocar http:// o https:// al principio <br>`;
+                              warnings += `La URL de la imagen no es valida, asegurate de colocar http:// o https:// al principio, y que termine con la extension de la imagen<br>`;
                               bandera = true;
                             }
                             if( removerEspacios(resena.value) < 10){ /* Valida que haya mas de 10 palabras */
