@@ -32,10 +32,11 @@ let formReview = `
           </div>
           <br>
           <label for="inputGroupFile02">
-            Añadi tu captura de pantalla
+            Añadi tu captura de pantalla: (http://www.example.com/image.jpg)
           </label>
+          <p><label>Formatos aceptados: jpg|jpeg|png|gif|bmp|svg </label></p>
           <div class="form-review-item">
-            <input type="url" id="image-url" placeholder="https://imageurl.com/example.jpg" required/>
+            <input type="url" id="image-url" placeholder="https://www.imageurl.com/example.jpg" required/>
           </div>
           <br>
 
