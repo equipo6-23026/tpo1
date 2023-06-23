@@ -23,13 +23,12 @@ let formReview = `
               id="basic-url"
               placeholder="12341234"
               class="steamid-input"
-              required
             />
           </div>
           <br>
           <label for="titulo">Titulo del Videojuego<span class="aclaracion">(Minimo 1 letra)</span></label>
           <div class="form-review-item">
-            <input id="titulo" type="text" required>
+            <input id="titulo" type="text">
           </div>
           <br>
           <label for="inputGroupFile02">
@@ -90,17 +89,17 @@ let formReview = `
           <br>
           <button type="submit">Enviar</button>
           <div class="logout-container"><a class="logout-link" href="" onclick="logout()">Cerrar Sesion</div> 
-`/* FALTA PONERLES CLASES */
+`
 
 let loginError = `
 <div class="form-login-item">
   <label for="usuario">Usuario:</label>
-  <input type="text" name="usuario" id="usuario" required>
+  <input type="text" name="usuario" id="usuario">
 </div>
 
 <div class="form-login-item">
     <label for="contrasena">Contraseña:</label>
-    <input type="password" name="contrasena" id="contrasena" required>
+    <input type="password" name="contrasena" id="contrasena">
     
 </div>
 <button class="btn-login" type=submit()>Enviar</button>
