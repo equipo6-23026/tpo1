@@ -11,7 +11,7 @@ y 10 caracteres */
 const myReTitulo = new RegExp(/^(?=.*[a-zA-Z])[a-zA-Z0-9\s\-!&'():]+$/)
 /* Valida que exista por lo menos una letra, y acepta
 caracteres especiales y numeros tambien */
-const myReUrl = new RegExp(/\d{8}$/);
+const myReUrl = new RegExp(/^\d{8}$/);
 /* Solo acepta secuencia de 8 numeros. */
 const myReImgUrl = new RegExp(/^(https?:\/\/[\w-]+(\.[\w-]+)+(:\d+)?(\/\S*)?)\.(jpeg|jpg|png|gif|bmp|svg)$/i);
 function validando(){
@@ -36,11 +36,11 @@ function validando(){
                               bandera = true;
                             } 
                             if(!myReUrl.test(url.value)){
-                              warnings += `La URL no es valida <br>`;
+                              warnings += `La URL de tu perfil no es valida <br>`;
                               bandera = true;
                             }
                             if(!myReImgUrl.test(imageUrl.value)){
-                              warnings += `La URL de la imagen no es valida <br>`;
+                              warnings += `La URL de la imagen no es valida, asegurate de colocar http:// o https:// al principio <br>`;
                               bandera = true;
                             }
                             if( removerEspacios(resena.value) < 10){ /* Valida que haya mas de 10 palabras */
