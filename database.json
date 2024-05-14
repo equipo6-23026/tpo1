@@ -1,7 +1,7 @@
 {
     "elden_ring":{
     "titulo": "Elden Ring",
-    "precio": 59.99,
+    "precio": 47.99,
     "fecha": 20220224,
     "portada" : "https://cdn.wccftech.com/wp-content/uploads/2022/02/elden-ring-1.jpg",
     "reviews":{
@@ -13,7 +13,7 @@
     },
     "dark_souls_remastered":{
         "titulo": "dark souls: remastered",
-        "precio": 39.99,
+        "precio": 15.99,
         "fecha":20180523,
         "portada": "https://gamingbolt.com/wp-content/uploads/2018/03/dark-souls-remastered-5.jpg",
         "reviews":{
@@ -40,7 +40,7 @@
     },
     "hades":{
         "titulo": "Hades",
-        "precio": 24.99,
+        "precio": 4.99,
         "fecha":20201017,
         "portada": "https://cdn.akamai.steamstatic.com/steam/apps/1145360/ss_c0fed447426b69981cf1721756acf75369801b31.1920x1080.jpg",
         "reviews":{
@@ -51,7 +51,7 @@
     },
     "the_witcher_3":{
         "titulo": "The Witcher 3: Wild Hunt",
-        "precio": 39.99,
+        "precio": 29.99,
         "fecha":20150518,
         "portada":"https://box-of-heroes.com/wp-content/uploads/2023/02/the_witcher_3-Kalysten.jpg",
         "reviews":{
@@ -63,7 +63,7 @@
     },
     "outer_Wilds":{
         "titulo": "Outer Wilds",
-        "precio": 24.99,
+        "precio": 12.99,
         "fecha":20200618,
         "portada":"https://pressover.news/wp-content/uploads/2021/02/maxresdefault-2.jpg",
         "reviews":{
@@ -75,7 +75,7 @@
     },
     "subnautica":{
         "titulo": "Subnautica",
-        "precio": 29.99,
+        "precio": 14.99,
         "fecha":20180124,
         "portada":"https://gdconf.com/sites/default/files/subnauticabig1.jpg",
         "reviews":{
@@ -87,7 +87,7 @@
     },
     "starbound":{
         "titulo": "Starbound",
-        "precio": 14.99,
+        "precio": 7.99,
         "fecha":20160722,
         "portada":"https://i.blogs.es/juegos/8512/starbound/fotos/noticias/starbound-2437474.jpg",
         "reviews":{
@@ -99,7 +99,7 @@
     },
     "moonlighter":{
         "titulo": "Moonlighter",
-        "precio": 19.99,
+        "precio": 1.57,
         "fecha":20180529,
         "portada":"https://images.squarespace-cdn.com/content/v1/55ef0e29e4b099e22cdc9eea/9130ac08-9ff4-4ca8-ae16-2c9b92fea61c/moonlighter_pic.jpg",
         "reviews":{
@@ -111,7 +111,7 @@
     },
     "my_summer_car":{
         "titulo": "My Summer Car",
-        "precio": 14.99,
+        "precio": 7.99,
         "fecha":20161024,
         "portada": "https://www.gameawards.ru/images/uploads/files/1534106277_2.png",
         "reviews":{
@@ -123,7 +123,7 @@
     },
     "stardew_valley":{
         "titulo": "Stardew Valley",
-        "precio": 14.99,
+        "precio": 4.99,
         "fecha":20160226,
         "portada":"https://www.irrompibles.net/irrwp/wp-content/uploads/2019/05/stardew-valley-1.png",
         "reviews":{
@@ -135,7 +135,7 @@
     },
     "starwars-kotor":{
         "titulo": "Star Wars: Knights of the Old Republic",
-        "precio": 9.99,
+        "precio": 5.79,
         "fecha":20090905,
         "portada":"https://prod.assets.earlygamecdn.com/images/kotor-game-reveal.jpg",
         "reviews":{
@@ -147,7 +147,7 @@
     },
     "hollow-knight":{
         "titulo": "Hollow Knight",
-        "precio": 14.99,
+        "precio": 4.99,
         "fecha":20170224,
         "portada":"https://static.wikia.nocookie.net/hollowknight/images/a/a1/HK_first_cover_art.png",
         "reviews":{
@@ -159,7 +159,7 @@
     },
     "vampire-survivors":{
         "titulo": "Vampire Survivors",
-        "precio": 3.99,
+        "precio": 3.49,
         "fecha":20221020,
         "portada":"https://www.banwoh.com/wp-content/uploads/2022/02/vampire-survivors-portada.jpg",
         "reviews":{
@@ -171,11 +171,38 @@
     },
     "elypse":{
         "titulo": "Elypse",
-        "precio": 14.99,
+        "precio": 6.49,
         "fecha":20230517,
         "portada":"https://cl.buscafs.com/www.levelup.com/public/uploads/images/796024/796024.jpg",
         "reviews":{
             "cris_tocci":"Este juego es Ori, en muchisimos sentidos. No es algo malo, sino por el contrario esta muy bien hecho. A nivel mecánico, lo primero a destacar es que tanto el movimiento del personaje como el dash se siente como el ori, y tiene otras mecánicas del ori y otras que son originales del juego. Pero en si tiene pocas mecánicas. El diseño de sonido también es muy parecido, con diálogos en un idioma desconocido. Los enemigos son muy poco variados pero son divertidos, y están bien combinados con el diseño de nivel. Los niveles son lineales, y creo que si hubieran sido más amplios y en un estilo metroidvania le hubiera aportado muchisimo al juego. La historia del juego es interesante pero no es nada del otro mundo. El juego es corto, cuando lo terminas te quedas con ganas de jugar un poco más y sacarle más jugo a las mecánicas que fuiste aprendiendo y mejorando. Sin embargo, este juego es difícil,, por momentos puede ser un poquito frustrante, pero nunca se sintió como si fuera injusto. Me alegra que un estudio indie hiciera un juego como este, espero puedan sacar un DLC o una segunda parte."
+        }
+    },
+    "cyberpunk-horror":{
+        "titulo": "Cyberpunk Horror",
+        "precio": 2.99,
+        "fecha":20240509,
+        "portada":"https://cdn.cloudflare.steamstatic.com/steam/apps/2924850/ss_ff834576f3a20979567fc2b7a346fbe277f0d14e.600x338.jpg",
+        "reviews":{
+            "cris":"Juego de horror casual con logros faciles y gameplay relajante. Tenes que dar vueltas evitando el zombie y juntar las llaves para regresar a tu habitación."
+        }
+    },
+    "project-asteroids":{
+        "titulo": "Project Asteroids",
+        "precio": 5.79,
+        "fecha":20240508,
+        "portada":"https://cdn.cloudflare.steamstatic.com/steam/apps/2405270/ss_5fbc2a77e953271ed21a0dbc195c4621efa40666.600x338.jpg",
+        "reviews":{
+            "Cris32043":"Tiene Potencial y es muy bueno para explorar tranqui. Todavía no parece tener un sistema de trading con otros jugadores."
+        }
+    },
+    "hades-ii":{
+        "titulo": "Hades II",
+        "precio":14.99,
+        "fecha":20240506,
+        "portada":"https://cdn.cloudflare.steamstatic.com/steam/apps/1145350/ss_c8d2b18451a2cc4d5b4fdd78ed84a5e64e051eac.600x338.jpg",
+        "reviews":{
+            "Cristian8943":"Es como el archiconocido Hades pero con algunas mecánicas y mejoras nuevas. Recomendado a quien haya pasado unas cuantas horas con la entrega anterior."
         }
     }
 }
