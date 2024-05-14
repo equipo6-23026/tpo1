@@ -1,17 +1,20 @@
 
 async function consultaDolar(){
-    function consultaDolarSi(){
-        const API_URL='https://dolarsi.com/api/api.php?type=valoresprincipales';
+    function consultaDolarApi(){
+        const API_URL="https://dolarapi.com/v1/dolares";
             return fetch(`${API_URL}`).then((response) => response.json());
     }
-    return consultaDolarSi().then((c) => {
+
+
+    return consultaDolarApi().then((c) => {
         for (let casakey in Object.keys(c)){
-            /*OBJETO EJEMPLO c[casakey].casa:
-            Object { compra: "236,09", venta: "246,09", agencia: "349",
-            nombre: "Dolar Oficial", variacion: "0,23",
-            ventaCero: "TRUE", decimales: "2" }*/
-            if (c[casakey].casa.nombre == "Dolar Oficial"){
-                return c[casakey].casa.venta;
+            /*OBJETO EJEMPLO c[casakey]:
+            Object { moneda: "USD", casa: "oficial", 
+            nombre: "Oficial", compra: "863", venta: "903",
+            fechaActualizacion: "2024-05-13T20:58:00.000Z",
+            */
+            if (c[casakey].casa == "oficial"){
+                return c[casakey].venta;
             }
         }
     })
